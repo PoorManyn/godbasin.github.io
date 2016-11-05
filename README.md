@@ -9,6 +9,7 @@
 > [《Angular2使用笔记4--路由和导航》](https://godbasin.github.io/2016/10/16/angular2-notes-4-route-component/)   
 > [《Angular2使用笔记5--动画和制作index页面》](https://godbasin.github.io/2016/10/29/angular2-notes-5-animation-and-create-index/)   
 > [《Angular2使用笔记6--使用服务类》](https://godbasin.github.io/2016/10/30/angular2-notes-6-use-service-class/)   
+> [《Angular2使用笔记7--Angular2中的基础概念》](https://godbasin.github.io/2016/11/05/angular2-notes-7-basic-concept-in-angular2/)   
 
 ### Vue笔记   
 > [《Vue使用笔记4--Vue事件、过渡和制作index页面》](https://godbasin.github.io/2016/09/11/vue-notes-4-fullfill-index/)                       
