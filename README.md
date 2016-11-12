@@ -49,7 +49,9 @@
 > [《Angular使用笔记2--创建登录页面》](https://godbasin.github.io/2016/07/08/angular-note-2-create-login/)                                              
 > [《Angular使用笔记1--搭建Angular项目》](https://godbasin.github.io/2016/07/01/angular-note-1-create-angular-project/)  
 
-### 其他      
+### 其他     
+> [《将json输出为html(二)：js数据类型判断实现》](https://godbasin.github.io/2016/11/13/json-to-html-2-use-object/)  
+> [《将json输出为html(一)：字符串正则匹配》](https://godbasin.github.io/2016/11/13/json-to-html-1-use-string-regular/)                                                
 > [《谈谈js的闭包》](https://godbasin.github.io/2016/07/03/js-closure/)                         
 > [《谈谈js的this》](https://godbasin.github.io/2016/07/02/js-this/)                           
 > [《CSS的display有关》](https://godbasin.github.io/2016/06/26/about-display/)                         
