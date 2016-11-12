@@ -79,7 +79,7 @@ var _hmt = _hmt || [];
     </p>
   <p class="article-time">
     <time datetime="2016-10-05T00:49:32.000Z" itemprop="datePublished">2016-10-05</time>
-    更新日期:<time datetime="2016-10-05T00:49:43.599Z" itemprop="dateModified">2016-10-05</time>
+    更新日期:<time datetime="2016-11-12T02:12:28.245Z" itemprop="dateModified">2016-11-12</time>
     
   </p>
 </header>
@@ -88,7 +88,7 @@ var _hmt = _hmt || [];
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#根据产品规划划分模块"><span class="toc-number">1.</span> <span class="toc-text">根据产品规划划分模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#主要页面逻辑"><span class="toc-number">1.1.</span> <span class="toc-text">主要页面逻辑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定义登录组件"><span class="toc-number">1.2.</span> <span class="toc-text">定义登录组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加路由"><span class="toc-number">1.3.</span> <span class="toc-text">添加路由</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编写Login组件"><span class="toc-number">2.</span> <span class="toc-text">编写Login组件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#添加模板"><span class="toc-number">2.1.</span> <span class="toc-text">添加模板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加样式"><span class="toc-number">2.2.</span> <span class="toc-text">添加样式</span></a></li></ol></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#根据产品规划划分模块"><span class="toc-number">1.</span> <span class="toc-text">根据产品规划划分模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#主要页面逻辑"><span class="toc-number">1.1.</span> <span class="toc-text">主要页面逻辑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定义登录组件"><span class="toc-number">1.2.</span> <span class="toc-text">定义登录组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加路由"><span class="toc-number">1.3.</span> <span class="toc-text">添加路由</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编写Login组件"><span class="toc-number">2.</span> <span class="toc-text">编写Login组件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#添加模板"><span class="toc-number">2.1.</span> <span class="toc-text">添加模板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加样式"><span class="toc-number">2.2.</span> <span class="toc-text">添加样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定义Login组件"><span class="toc-number">2.3.</span> <span class="toc-text">定义Login组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输出Login组件"><span class="toc-number">2.4.</span> <span class="toc-text">输出Login组件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">3.</span> <span class="toc-text">结束语</span></a></li></ol>
 		</div>
 		
 		<p>最近在学习Angular2作为前端的框架，《Angular2使用笔记》系列用于记录过程中的一些使用和解决方法。<br>本文记录搭建登录页面的过程。<br><a id="more"></a></p>
@@ -127,7 +127,7 @@ var _hmt = _hmt || [];
 <li><p>添加样式的方式</p>
 <ul>
 <li>元数据中的样式：给@Component装饰器添加一个styles数组型属性</li>
-<li>模板内联样式：放到<style>标签中来直接在 HTML 模板中嵌入样式</li>
+<li>模板内联样式：放到<code>&lt;style&gt;</code>标签中来直接在 HTML 模板中嵌入样式</li>
 <li>元数据中的样式表URL：给组件的@Component装饰器中添加一个styleUrls属性来从外部CSS文件中加载样式</li>
 <li>模板中的link 标签：在组件的HTML模板中嵌入<link>标签</li>
 <li>CSS@imports：利用标准的CSS@import规则来把其它CSS文件导入到我们的CSS文件中</li>
@@ -152,7 +152,7 @@ var _hmt = _hmt || [];
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.login</span> &#123;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">200px</span> <span class="number">20px</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.login</span> &gt; <span class="selector-tag">form</span> &#123;</div><div class="line">    <span class="attribute">border</span>: solid <span class="number">1px</span> <span class="number">#999</span>;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">20px</span>;</div><div class="line">    <span class="attribute">border-radius</span>: <span class="number">5px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>不得不说，ng2中组件样式的作用域仅在于该组件内，真正做到了组件的解耦。<br>当然，我们查看元素的时候便可以发现，ng2通过给组件设定随机的代号属性来管理每个组件的样式，如图：<br><img src="http://o905ne85q.bkt.clouddn.com/F11E.tmp.png" alt="image"></p>
 <ul>
-<li>参考：<a href="https://angular.cn/docs/ts/latest/guide/component-styles.html">组件样式</a></li>
+<li>参考：<a href="https://angular.cn/docs/ts/latest/guide/component-styles.html" target="_blank" rel="external">组件样式</a></li>
 </ul>
 <h3 id="定义Login组件"><a href="#定义Login组件" class="headerlink" title="定义Login组件"></a>定义Login组件</h3><ul>
 <li>在login.component.ts文件中定义Login组件</li>
@@ -163,8 +163,8 @@ var _hmt = _hmt || [];
 </ul>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> * from <span class="string">'./login.component'</span>;</div></pre></td></tr></table></figure>
 <h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><hr>
-<p>本骚年也是Angular2的初体验者，如果小伙伴们有好的资源请千万千万要分享呀。<br><a href="https://github.com/godbasin/godbasin.github.io/tree/blog-codes/angular2-notes/2-create-login">此处查看项目代码（仅包含src部分）</a><br><a href="http://oc8qsv1w6.bkt.clouddn.com/2-create-login/index.html">此处查看页面效果</a></p>
-</style></li></ul></li></ul>  
+<p>本骚年也是Angular2的初体验者，如果小伙伴们有好的资源请千万千万要分享呀。<br><a href="https://github.com/godbasin/godbasin.github.io/tree/blog-codes/angular2-notes/2-create-login" target="_blank" rel="external">此处查看项目代码（仅包含src部分）</a><br><a href="http://oc8qsv1w6.bkt.clouddn.com/2-create-login/index.html" target="_blank" rel="external">此处查看页面效果</a></p>
+  
 	</div>
 	<div class="author-right">
   		<p>作者：被删</p>
@@ -226,7 +226,7 @@ var _hmt = _hmt || [];
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#根据产品规划划分模块"><span class="toc-number">1.</span> <span class="toc-text">根据产品规划划分模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#主要页面逻辑"><span class="toc-number">1.1.</span> <span class="toc-text">主要页面逻辑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定义登录组件"><span class="toc-number">1.2.</span> <span class="toc-text">定义登录组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加路由"><span class="toc-number">1.3.</span> <span class="toc-text">添加路由</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编写Login组件"><span class="toc-number">2.</span> <span class="toc-text">编写Login组件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#添加模板"><span class="toc-number">2.1.</span> <span class="toc-text">添加模板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加样式"><span class="toc-number">2.2.</span> <span class="toc-text">添加样式</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#根据产品规划划分模块"><span class="toc-number">1.</span> <span class="toc-text">根据产品规划划分模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#主要页面逻辑"><span class="toc-number">1.1.</span> <span class="toc-text">主要页面逻辑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定义登录组件"><span class="toc-number">1.2.</span> <span class="toc-text">定义登录组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加路由"><span class="toc-number">1.3.</span> <span class="toc-text">添加路由</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编写Login组件"><span class="toc-number">2.</span> <span class="toc-text">编写Login组件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#添加模板"><span class="toc-number">2.1.</span> <span class="toc-text">添加模板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加样式"><span class="toc-number">2.2.</span> <span class="toc-text">添加样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定义Login组件"><span class="toc-number">2.3.</span> <span class="toc-text">定义Login组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输出Login组件"><span class="toc-number">2.4.</span> <span class="toc-text">输出Login组件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">3.</span> <span class="toc-text">结束语</span></a></li></ol>
   </div>
 
 <div id="asidepart">
@@ -237,6 +237,12 @@ var _hmt = _hmt || [];
 	<div class="archiveslist">
 		<p class="asidetitle">最近文章</p>
 			<ul class="archive-list">
+			
+					
+				<li class="archive-list-item">
+					<a class="archive-list-link" href="/2016/11/12/angular2-notes-9-websocket-service-with-rxjs/" title="Angular2使用笔记9--使用Subject创建Websocket服务">Angular2使用笔记9--使用S...</a>
+				</li>
+				
 			
 					
 				<li class="archive-list-item">
@@ -292,10 +298,6 @@ var _hmt = _hmt || [];
 				</li>
 				
 			
-					
-				<li class="archive-list-item">
-					<a class="archive-list-link" href="/2016/09/16/angular-note-14-use-bmap/" title="Angular使用笔记14-在Angular中使用百度地图">Angular使用笔记14-在Ang...</a>
-				</li>
 				
 			
 				
@@ -377,7 +379,7 @@ var _hmt = _hmt || [];
   
   <div class="archiveslist">
     <p class="asidetitle"><a href="/archives">归档</a></p>
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">9</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">9</span></li></ul>
   </div>
 
 
@@ -391,7 +393,7 @@ var _hmt = _hmt || [];
 			</li>
 		
 			<li class="archive-list-item">
-				<a class="archive-list-link" href="/categories/angular2火锅/" title="angular2火锅">angular2火锅<sup>8</sup></a>
+				<a class="archive-list-link" href="/categories/angular2火锅/" title="angular2火锅">angular2火锅<sup>9</sup></a>
 			</li>
 		
 			<li class="archive-list-item">
@@ -440,7 +442,7 @@ var _hmt = _hmt || [];
 			</li>
 		
 			<li class="archive-list-item">
-				<a class="archive-list-link" href="/tags/笔记/" title="笔记">笔记<sup>36</sup></a>
+				<a class="archive-list-link" href="/tags/笔记/" title="笔记">笔记<sup>37</sup></a>
 			</li>
 		
 			<li class="archive-list-item">
