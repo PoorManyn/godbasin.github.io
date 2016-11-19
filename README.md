@@ -2,6 +2,9 @@
 被删前端博客   
 ---      
 
+### Vue2笔记
+> [《Vue2使用笔记1--vue-cli+vue-router搭建应用》](https://godbasin.github.io/2016/11/19/vue2-notes-1-build-vue2-project/) 
+
 ### Angular2笔记    
 > [《Angular2使用笔记9--使用Subject创建Websocket服务》](https://godbasin.github.io/2016/11/12/angular2-notes-9-websocket-service-with-rxjs/) 
 > [《Angular2使用笔记8--在Angular2中使用Observable对象》](https://godbasin.github.io/2016/11/06/angular2-notes-8-rxjs-in-angular2/) 
