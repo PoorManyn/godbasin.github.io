@@ -3,6 +3,7 @@
 ---      
 
 ### Vue2笔记
+> [《Vue2使用笔记8--vue与datatables(二)：服务端渲染》](https://godbasin.github.io/2016/12/11/vue2-notes-8-use-datatable-with-server/)     
 > [《Vue2使用笔记7--vue与datatables(一):浏览器渲染》](https://godbasin.github.io/2016/12/10/vue2-notes-7-use-datatable-with-html/)     
 > [《Vue2使用笔记6--vue与各种插件和谐相处地创建表单》](https://godbasin.github.io/2016/12/04/vue2-notes-6-form-with-some-plugins/)      
 > [《Vue2使用笔记5--transition过渡效果使用》](https://godbasin.github.io/2016/12/03/vue2-notes-5-transition-animation/)      
