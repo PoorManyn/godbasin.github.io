@@ -3,6 +3,7 @@
 ---      
 
 ### React-Redux笔记  
+> [《React-Redux使用笔记2--完善打包生产代码流程》](https://godbasin.github.io/2016/12/25/react-redux-notes-2-complete-publish/)  
 > [《React-Redux使用笔记1--使用webpack搭建React开发环境》](https://godbasin.github.io/2016/12/24/react-redux-notes-1-build-react-project/)   
 
 ### Vue2笔记
