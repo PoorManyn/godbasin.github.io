@@ -3,6 +3,7 @@
 ---      
 
 ### React-Redux笔记  
+> [《React-Redux使用笔记8--使用CSS过渡动画》](https://godbasin.github.io/2017/01/26/react-redux-notes-8-use-css-transition/)  
 > [《React-Redux使用笔记7--嵌套路由的使用》](https://godbasin.github.io/2017/01/21/react-redux-notes-7-inside-route/)  
 > [《React-Redux使用笔记6--创建Sidebar组件》](https://godbasin.github.io/2017/01/15/react-redux-notes-6-create-sidebar/)  
 > [《React-Redux使用笔记5--创建Top组件》](https://godbasin.github.io/2017/01/08/react-redux-notes-5-create-top/)  

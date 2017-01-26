@@ -1,0 +1,618 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>React-Redux使用笔记8--使用CSS过渡动画 | Here. There.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="被删">
+    
+    <meta name="description" content="最近又重新拾起了React框架，并配合开源模板gentelella以及Redux建立了个简单的项目。《React-Redux使用笔记》系列用于记录过程中的一些使用和解决方法。本文记录在SidebarList组件中使用CSS过渡动画的过程。">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?3d902de4a19cf2bf179534ffd2dd7b7f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/sun.png" alt="Here. There." title="Here. There."/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Here. There.">Here. There.</a></h1>
+				<h2 class="blog-motto">Love ice cream. Love sunshine. Love life. Love the world. Love myself. Love you.</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/categories">分类</a></li>
+					
+						<li><a href="/about">关于我</a></li>
+					
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2017/01/26/react-redux-notes-8-use-css-transition/" title="React-Redux使用笔记8--使用CSS过渡动画" itemprop="url">React-Redux使用笔记8--使用CSS过渡动画</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="https://godbasin.github.io" title="被删">被删</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2017-01-26T15:10:55.000Z" itemprop="datePublished">2017-01-26</time>
+    更新日期:<time datetime="2017-01-26T15:14:05.858Z" itemprop="dateModified">2017-01-26</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#React动画"><span class="toc-number">1.</span> <span class="toc-text">React动画</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ReactCSSTransitionGroup：高级API"><span class="toc-number">1.1.</span> <span class="toc-text">ReactCSSTransitionGroup：高级API</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ReactTransitionGroup：底层API"><span class="toc-number">1.2.</span> <span class="toc-text">ReactTransitionGroup：底层API</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#给SidebarList添加动画"><span class="toc-number">2.</span> <span class="toc-text">给SidebarList添加动画</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装React动画插件"><span class="toc-number">2.1.</span> <span class="toc-text">安装React动画插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加CSS样式"><span class="toc-number">2.2.</span> <span class="toc-text">添加CSS样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在SidebarList组件添加"><span class="toc-number">2.3.</span> <span class="toc-text">在SidebarList组件添加</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#给HomeContainer组件添加路由过渡动画"><span class="toc-number">3.</span> <span class="toc-text">给HomeContainer组件添加路由过渡动画</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#添加CSS样式-1"><span class="toc-number">3.1.</span> <span class="toc-text">添加CSS样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在HomeContainer组件添加"><span class="toc-number">3.2.</span> <span class="toc-text">在HomeContainer组件添加</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">4.</span> <span class="toc-text">结束语</span></a></li></ol>
+		</div>
+		
+		<p>最近又重新拾起了React框架，并配合开源模板gentelella以及Redux建立了个简单的项目。《React-Redux使用笔记》系列用于记录过程中的一些使用和解决方法。<br>本文记录在SidebarList组件中使用CSS过渡动画的过程。<br><a id="more"></a></p>
+<h2 id="React动画"><a href="#React动画" class="headerlink" title="React动画"></a>React动画</h2><hr>
+<p>React为动画提供一个ReactTransitonGroup插件组件作为一个底层的API，一个ReactCSSTransitionGroup来简单地实现基本的CSS动画和过渡。</p>
+<h3 id="ReactCSSTransitionGroup：高级API"><a href="#ReactCSSTransitionGroup：高级API" class="headerlink" title="ReactCSSTransitionGroup：高级API"></a>ReactCSSTransitionGroup：高级API</h3><p>ReactCSSTransitionGroup是基于ReactTransitionGroup的，在React组件进入或者离开DOM的时候，它是一种简单地执行CSS过渡和动画的方式。</p>
+<p>ReactCSSTransitionGroup是ReactTransitions的接口。这是一个简单的元素，包含了所有你对其动画感兴趣的组件。</p>
+<p>注意： </p>
+<ul>
+<li>你必须为ReactCSSTransitionGroup的所有子级提供键属性，即使只渲染一项。这就是React确定哪一个子级插入了，移除了，或者停留在那里</li>
+<li>为了能够给它的子级应用过渡效果，ReactCSSTransitionGroup必须已经挂载到了DOM</li>
+</ul>
+<p>可以给ReactCSSTransitionGroup添加<code>transitionEnter={false}</code>或者<code>transitionLeave={false}</code>props来禁用入场或者出场动画</p>
+<h3 id="ReactTransitionGroup：底层API"><a href="#ReactTransitionGroup：底层API" class="headerlink" title="ReactTransitionGroup：底层API"></a>ReactTransitionGroup：底层API</h3><p>ReactTransitionGroup是动画的基础。它可以通过React.addons.TransitionGroup得到。<br>当子级被添加或者从其中移除的时候，特殊的生命周期函数就会在它们上面被调用。</p>
+<ul>
+<li><p>componentWillEnter(callback)</p>
+<blockquote>
+<p>在组件被添加到已有的TransitionGroup中的时候，该函数和componentDidMount()被同时调用。<br>这将会阻塞其它动画触发，直到callback被调用。<br>该函数不会在TransitionGroup初始化渲染的时候调用。</p>
+</blockquote>
+</li>
+<li><p>componentDidEnter()</p>
+<blockquote>
+<p>该函数在传给componentWillEnter的callback函数被调用之后调用。</p>
+</blockquote>
+</li>
+<li><p>componentWillLeave(callback)</p>
+<blockquote>
+<p>该函数在子级从ReactTransitionGroup中移除的时候调用。<br>虽然子级被移除了，ReactTransitionGroup将会使它继续在DOM中，直到callback被调用。</p>
+</blockquote>
+</li>
+<li><p>componentDidLeave()</p>
+<blockquote>
+<p>该函数在willLeave callback被调用的时候调用（与componentWillUnmount是同一时间）。</p>
+</blockquote>
+</li>
+</ul>
+<p>虽然说底层的API我们较少会用到，但是其实从这些API就能了解到生命周期，以及相关的实现方式了呢。</p>
+<h2 id="给SidebarList添加动画"><a href="#给SidebarList添加动画" class="headerlink" title="给SidebarList添加动画"></a>给SidebarList添加动画</h2><hr>
+<h3 id="安装React动画插件"><a href="#安装React动画插件" class="headerlink" title="安装React动画插件"></a>安装React动画插件</h3><p>使用npm安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save react-addons-transition-group react-addons-css-transition-group</div></pre></td></tr></table></figure></p>
+<h3 id="添加CSS样式"><a href="#添加CSS样式" class="headerlink" title="添加CSS样式"></a>添加CSS样式</h3><p>我们在static/gentelella/build/css文件夹下，创建animation.css文件，并添加动画样式：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.slide-enter</span> &#123;</div><div class="line">    <span class="attribute">max-height</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">overflow</span>: hidden;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.slide-enter</span><span class="selector-class">.slide-enter-active</span> &#123;</div><div class="line">    <span class="attribute">max-height</span>: <span class="number">100px</span>;</div><div class="line">    <span class="attribute">transition</span>: all <span class="number">300ms</span> ease-in-out;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.slide-leave</span> &#123;</div><div class="line">    <span class="attribute">max-height</span>: <span class="number">100px</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.slide-leave</span><span class="selector-class">.slide-leave-active</span> &#123;</div><div class="line">    <span class="attribute">max-height</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">overflow</span>: hidden;</div><div class="line">    <span class="attribute">transition</span>: all <span class="number">300ms</span> ease-in-out;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>我们使用设置max-height的方式来实现slide的动画效果。</p>
+<h3 id="在SidebarList组件添加"><a href="#在SidebarList组件添加" class="headerlink" title="在SidebarList组件添加"></a>在SidebarList组件添加</h3><p>在SidebarList.jsx添加动画的使用：<br><figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> ReactCSSTransitionGroup <span class="keyword">from</span> <span class="string">'react-addons-css-transition-group'</span></div><div class="line"><span class="keyword">import</span> <span class="string">'../../../../static/gentelella/build/css/animation.css'</span></div><div class="line"></div><div class="line">&lt;ReactCSSTransitionGroup transitionName=<span class="string">"slide"</span> transitionEnterTimeout=&#123;<span class="number">300</span>&#125; transitionLeaveTimeout=&#123;<span class="number">300</span>&#125;&gt;</div><div class="line">    ... <span class="comment">// 子菜单内容</span></div><div class="line">&lt;<span class="regexp">/ReactCSSTransitionGroup&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="给HomeContainer组件添加路由过渡动画"><a href="#给HomeContainer组件添加路由过渡动画" class="headerlink" title="给HomeContainer组件添加路由过渡动画"></a>给HomeContainer组件添加路由过渡动画</h2><hr>
+<h3 id="添加CSS样式-1"><a href="#添加CSS样式-1" class="headerlink" title="添加CSS样式"></a>添加CSS样式</h3><p>我们在animation.css文件添加动画样式：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.fade-enter</span> &#123;</div><div class="line">    <span class="attribute">opacity</span>: <span class="number">0.01</span>;</div><div class="line">    <span class="attribute">transition</span>: opacity <span class="number">100ms</span> ease-in;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.fade-enter</span><span class="selector-class">.fade-enter-active</span> &#123;</div><div class="line">    <span class="attribute">opacity</span>: <span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>因为react动画的淡入淡出使用的时候，会存在两个元素同时出现在页面中的情况，所以此处为了方便，本骚年就把离场动画关掉啦。</p>
+<h3 id="在HomeContainer组件添加"><a href="#在HomeContainer组件添加" class="headerlink" title="在HomeContainer组件添加"></a>在HomeContainer组件添加</h3><p>在HomeContainer.jsx添加动画的使用：<br>``` jsx<br>import ReactCSSTransitionGroup from ‘react-addons-css-transition-group’<br>import ‘../../../static/gentelella/build/css/animation.css’</p>
+<p><reactcsstransitiongroup transitionname="fade" transitionentertimeout="{200}" transitionleave="{false}"><br>    <div key="{this.props.location.pathname}">{that.props.children}</div><br></reactcsstransitiongroup><br>``</p>
+<p>这里需要注意的是，为了使子路由过渡可用，我们需要给其添加一个独一无二的key，这里我们使用location.pathname来作为这个key。</p>
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><hr>
+<p>本节简单举例介绍了下React中CSS动画过渡效果，其实关于路由切换同时存在两个组件的问题，我们也可以调用底层API去处理，小伙伴们下去也可以自己研究一下呗。<br><a href="https://github.com/godbasin/godbasin.github.io/tree/blog-codes/react-redux-notes/8-use-css-transition" target="_blank" rel="external">此处查看项目代码</a><br><a href="http://ohpt01s4n.bkt.clouddn.com/8-use-css-transition/index.html" target="_blank" rel="external">此处查看页面效果</a></p>
+  
+	</div>
+	<div class="author-right">
+  		<p>作者：被删</p>
+  		<p>出处：<a href="https://godbasin.github.io"></a>https://godbasin.github.io</p>
+  		<p>本文版权归作者所有，欢迎转载，但未经作者同意必须保留此段声明，且在文章页面明显位置给出原文连接，否则保留追究法律责任的权利。</p>
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/笔记/">笔记</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/react沙拉/">react沙拉</a>
+</div>
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="https://godbasin.github.io/2017/01/26/react-redux-notes-8-use-css-transition/" data-title="React-Redux使用笔记8--使用CSS过渡动画 | Here. There." data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2017/01/21/react-redux-notes-7-inside-route/"  title="React-Redux使用笔记7--嵌套路由的使用">
+ <strong>NEXT:</strong><br/> 
+ <span>React-Redux使用笔记7--嵌套路由的使用
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section class="comment">
+	<div class="ds-thread"></div>
+</section>
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#React动画"><span class="toc-number">1.</span> <span class="toc-text">React动画</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ReactCSSTransitionGroup：高级API"><span class="toc-number">1.1.</span> <span class="toc-text">ReactCSSTransitionGroup：高级API</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ReactTransitionGroup：底层API"><span class="toc-number">1.2.</span> <span class="toc-text">ReactTransitionGroup：底层API</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#给SidebarList添加动画"><span class="toc-number">2.</span> <span class="toc-text">给SidebarList添加动画</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装React动画插件"><span class="toc-number">2.1.</span> <span class="toc-text">安装React动画插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加CSS样式"><span class="toc-number">2.2.</span> <span class="toc-text">添加CSS样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在SidebarList组件添加"><span class="toc-number">2.3.</span> <span class="toc-text">在SidebarList组件添加</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#给HomeContainer组件添加路由过渡动画"><span class="toc-number">3.</span> <span class="toc-text">给HomeContainer组件添加路由过渡动画</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#添加CSS样式-1"><span class="toc-number">3.1.</span> <span class="toc-text">添加CSS样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在HomeContainer组件添加"><span class="toc-number">3.2.</span> <span class="toc-text">在HomeContainer组件添加</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">4.</span> <span class="toc-text">结束语</span></a></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  	
+	<div class="archiveslist">
+		<p class="asidetitle">最近文章</p>
+			<ul class="archive-list">
+			
+					
+				<li class="archive-list-item">
+					<a class="archive-list-link" href="/2017/01/26/react-redux-notes-8-use-css-transition/" title="React-Redux使用笔记8--使用CSS过渡动画">React-Redux使用笔记8--...</a>
+				</li>
+				
+			
+					
+				<li class="archive-list-item">
+					<a class="archive-list-link" href="/2017/01/21/react-redux-notes-7-inside-route/" title="React-Redux使用笔记7--嵌套路由的使用">React-Redux使用笔记7--...</a>
+				</li>
+				
+			
+					
+				<li class="archive-list-item">
+					<a class="archive-list-link" href="/2017/01/15/react-redux-notes-6-create-sidebar/" title="React-Redux使用笔记6--创建Sidebar组件">React-Redux使用笔记6--...</a>
+				</li>
+				
+			
+					
+				<li class="archive-list-item">
+					<a class="archive-list-link" href="/2017/01/08/react-redux-notes-5-create-top/" title="React-Redux使用笔记5--创建Top组件">React-Redux使用笔记5--...</a>
+				</li>
+				
+			
+					
+				<li class="archive-list-item">
+					<a class="archive-list-link" href="/2017/01/02/react-redux-notes-4-use-redux/" title="React-Redux使用笔记4--使用Redux管理状态">React-Redux使用笔记4--...</a>
+				</li>
+				
+			
+					
+				<li class="archive-list-item">
+					<a class="archive-list-link" href="/2017/01/01/react-redux-notes-3-use-router-login/" title="React-Redux使用笔记3--使用router完成简单登陆功能">React-Redux使用笔记3--...</a>
+				</li>
+				
+			
+					
+				<li class="archive-list-item">
+					<a class="archive-list-link" href="/2016/12/25/react-redux-notes-2-complete-publish/" title="React-Redux使用笔记2--完善打包生产代码流程">React-Redux使用笔记2--...</a>
+				</li>
+				
+			
+					
+				<li class="archive-list-item">
+					<a class="archive-list-link" href="/2016/12/24/react-redux-notes-1-build-react-project/" title="React-Redux使用笔记1--使用webpack搭建React开发环境">React-Redux使用笔记1--...</a>
+				</li>
+				
+			
+					
+				<li class="archive-list-item">
+					<a class="archive-list-link" href="/2016/12/17/vue2-notes-9-watch-router/" title="Vue2使用笔记9--监视路由">Vue2使用笔记9--监视路由...</a>
+				</li>
+				
+			
+					
+				<li class="archive-list-item">
+					<a class="archive-list-link" href="/2016/12/11/vue2-notes-8-use-datatable-with-server/" title="Vue2使用笔记8--vue与datatables(二)：服务端渲染">Vue2使用笔记8--vue与dat...</a>
+				</li>
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+			</ul>
+	</div>
+
+
+  
+  <div class="archiveslist">
+    <p class="asidetitle"><a href="/archives">归档</a></p>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">9</span></li></ul>
+  </div>
+
+
+  
+<div class="archiveslist">
+	<p class="asidetitle"><a href="/categories">分类</a></p>
+		<ul class="archive-list">
+		
+			<li class="archive-list-item">
+				<a class="archive-list-link" href="/categories/CSS炒饭/" title="CSS炒饭">CSS炒饭<sup>2</sup></a>
+			</li>
+		
+			<li class="archive-list-item">
+				<a class="archive-list-link" href="/categories/angular2火锅/" title="angular2火锅">angular2火锅<sup>9</sup></a>
+			</li>
+		
+			<li class="archive-list-item">
+				<a class="archive-list-link" href="/categories/angular混搭/" title="angular混搭">angular混搭<sup>15</sup></a>
+			</li>
+		
+			<li class="archive-list-item">
+				<a class="archive-list-link" href="/categories/jQuery杂烩/" title="jQuery杂烩">jQuery杂烩<sup>3</sup></a>
+			</li>
+		
+			<li class="archive-list-item">
+				<a class="archive-list-link" href="/categories/js什锦/" title="js什锦">js什锦<sup>6</sup></a>
+			</li>
+		
+			<li class="archive-list-item">
+				<a class="archive-list-link" href="/categories/react沙拉/" title="react沙拉">react沙拉<sup>16</sup></a>
+			</li>
+		
+			<li class="archive-list-item">
+				<a class="archive-list-link" href="/categories/vue八宝粥/" title="vue八宝粥">vue八宝粥<sup>13</sup></a>
+			</li>
+		
+			<li class="archive-list-item">
+				<a class="archive-list-link" href="/categories/web乱炖/" title="web乱炖">web乱炖<sup>2</sup></a>
+			</li>
+		
+		</ul>
+</div>
+
+
+  
+<div class="archiveslist">
+	<p class="asidetitle">标签</p>
+		<ul class="archive-list">
+		
+			<li class="archive-list-item">
+				<a class="archive-list-link" href="/tags/分享/" title="分享">分享<sup>3</sup></a>
+			</li>
+		
+			<li class="archive-list-item">
+				<a class="archive-list-link" href="/tags/原创部件/" title="原创部件">原创部件<sup>1</sup></a>
+			</li>
+		
+			<li class="archive-list-item">
+				<a class="archive-list-link" href="/tags/教程/" title="教程">教程<sup>1</sup></a>
+			</li>
+		
+			<li class="archive-list-item">
+				<a class="archive-list-link" href="/tags/笔记/" title="笔记">笔记<sup>54</sup></a>
+			</li>
+		
+			<li class="archive-list-item">
+				<a class="archive-list-link" href="/tags/自制插件/" title="自制插件">自制插件<sup>2</sup></a>
+			</li>
+		
+			<li class="archive-list-item">
+				<a class="archive-list-link" href="/tags/逻辑实现/" title="逻辑实现">逻辑实现<sup>5</sup></a>
+			</li>
+		
+		</ul>
+</div>
+
+
+    <div class="archiveslist">
+    <p class="asidetitle"><a href="/archives">about</a></p>
+      <ul class="archive-list">
+      	<li class="archive-list-item">
+      		<a>wangbeishan@163.com</a>
+      		<a href="https://github.com/godbasin">github.com/godbasin</a>
+      	</li>
+      </ul>
+  </div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<section class="info">
+		<p> 即使梦想再小，却很伟大 ^_^ </p>
+	</section>
+	 
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2017 
+		
+		<a href="https://godbasin.github.io" target="_blank" title="被删">被删</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"null"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+  </body>
+</html>
