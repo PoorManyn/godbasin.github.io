@@ -2,6 +2,9 @@
 被删前端博客   
 ---      
 
+### Angular1-free    
+> [《玩转Angular1(1)--webpack/babel环境配置》](https://godbasin.github.io/2017/02/05/angular-free-1-webpack-and-babel-config/)  
+
 ### React-Redux笔记  
 > [《React-Redux使用笔记8--使用CSS过渡动画》](https://godbasin.github.io/2017/01/26/react-redux-notes-8-use-css-transition/)  
 > [《React-Redux使用笔记7--嵌套路由的使用》](https://godbasin.github.io/2017/01/21/react-redux-notes-7-inside-route/)  
