@@ -3,6 +3,7 @@
 ---      
 
 ### Angular1-free    
+> [《玩转Angular1(2)--搭建angular项目》](https://godbasin.github.io/2017/02/11/angular-free-2-create-an-angular-project/)  
 > [《玩转Angular1(1)--webpack/babel环境配置》](https://godbasin.github.io/2017/02/05/angular-free-1-webpack-and-babel-config/)  
 
 ### React-Redux笔记  
