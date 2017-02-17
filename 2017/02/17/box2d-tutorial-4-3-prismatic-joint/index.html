@@ -79,7 +79,7 @@ var _hmt = _hmt || [];
     </p>
   <p class="article-time">
     <time datetime="2017-02-17T13:00:16.000Z" itemprop="datePublished">2017-02-17</time>
-    更新日期:<time datetime="2017-02-17T13:25:15.417Z" itemprop="dateModified">2017-02-17</time>
+    更新日期:<time datetime="2017-02-17T13:48:22.670Z" itemprop="dateModified">2017-02-17</time>
     
   </p>
 </header>
@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
 <p>移动关节类似旋转关节，只是将旋转角度换成了平移。关节中的两个刚体的相对运动只能发生在其轴向上。</p>
 <h3 id="b2PrismaticJointDef"><a href="#b2PrismaticJointDef" class="headerlink" title="b2PrismaticJointDef"></a>b2PrismaticJointDef</h3><p>首先创建两个物体，将其放入世界里，然后使用基类b2PrismaticJointDef创建一个移动关节，设置其各个参数，再将其放入到世界里即可。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> jointDefPrismatic = <span class="keyword">new</span> b2PrismaticJointDef(); <span class="comment">//创建一个移动关节jointDefPrismatic</span></div><div class="line">jointDefPrismatic.anchorPoint.Set(<span class="number">700</span>, <span class="number">565</span>);     <span class="comment">//一般选择两个锚点的中心点</span></div><div class="line">jointDefPrismatic.axis.Set(<span class="number">1</span>, <span class="number">0</span>);                <span class="comment">//两物体只沿轴向方向有相对运动</span></div><div class="line">jointDefPrismatic.body1 = Body1;              <span class="comment">//移动关节的一端连接到Body1上</span></div><div class="line">jointDefPrismatic.body2 = Body2;              <span class="comment">//移动关节的另一端连接到Body2上</span></div><div class="line"><span class="keyword">var</span> jointPrismatic= world.CreateJoint(jointDefPrismatic); <span class="comment">//将设置好参数的移动关节放到世界里</span></div></pre></td></tr></table></figure>
-<h3 id="返回总目录"><a href="#返回总目录" class="headerlink" title="返回总目录"></a><a href="https://godbasin.github.io/2017/02/17/box2d-tutorial-0-catalog">返回总目录</a></h3>  
+<h3 id="返回总目录"><a href="#返回总目录" class="headerlink" title="返回总目录"></a><a href="/2017/02/17/box2d-tutorial-0-catalog">返回总目录</a></h3>  
 	</div>
 	<div class="author-right">
   		<p>作者：被删</p>

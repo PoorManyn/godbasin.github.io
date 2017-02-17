@@ -79,7 +79,7 @@ var _hmt = _hmt || [];
     </p>
   <p class="article-time">
     <time datetime="2017-02-12T00:44:19.000Z" itemprop="datePublished">2017-02-12</time>
-    更新日期:<time datetime="2017-02-12T00:44:24.322Z" itemprop="dateModified">2017-02-12</time>
+    更新日期:<time datetime="2017-02-17T13:49:48.624Z" itemprop="dateModified">2017-02-17</time>
     
   </p>
 </header>
@@ -107,7 +107,7 @@ var _hmt = _hmt || [];
 <li><a href="http://blog.jobbole.com/43675/?utm_source=rss" target="_blank" rel="external">《我用 TypeScript 语言的七个月》</a></li>
 </ul>
 <h2 id="angular中使用Typescript"><a href="#angular中使用Typescript" class="headerlink" title="angular中使用Typescript"></a>angular中使用Typescript</h2><hr>
-<h3 id="webpack配置"><a href="#webpack配置" class="headerlink" title="webpack配置"></a>webpack配置</h3><p>其实依赖的安装我们在第一节<a href="https://godbasin.github.io/2017/02/05/angular-free-1-webpack-and-babel-config/">《玩转Angular1(1)–webpack/babel环境配置》</a>中已经进行安装了，这里我们简单说明一下在webpack中的配置调整。</p>
+<h3 id="webpack配置"><a href="#webpack配置" class="headerlink" title="webpack配置"></a>webpack配置</h3><p>其实依赖的安装我们在第一节<a href="/2017/02/05/angular-free-1-webpack-and-babel-config/">《玩转Angular1(1)–webpack/babel环境配置》</a>中已经进行安装了，这里我们简单说明一下在webpack中的配置调整。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// webpack.config.js</span></div><div class="line">resolve: &#123;</div><div class="line">    <span class="comment">// Add '.ts' as resolvable extensions.</span></div><div class="line">    extensions: [<span class="string">''</span>, <span class="string">'.ts'</span>, <span class="string">'.js'</span>]</div><div class="line">&#125;,</div><div class="line"><span class="attr">module</span>: &#123;</div><div class="line">    <span class="attr">loaders</span>: [&#123;</div><div class="line">            <span class="attr">test</span>: <span class="regexp">/\.ts$/</span>,</div><div class="line">            <span class="attr">loader</span>: <span class="string">'ts-loader'</span>,</div><div class="line">            <span class="attr">exclude</span>: <span class="regexp">/node_modules/</span></div><div class="line">        &#125;, &#123;...&#125;</div><div class="line">    ]</div><div class="line">&#125;,</div></pre></td></tr></table></figure>
 <p>这里我们添加了个ts-loader，后面我们会说明一下typescript的配置。<br>要注意的是ts-loader必须在其它处理.js文件的加载器之前运行。</p>
 <h3 id="tsconfig-json"><a href="#tsconfig-json" class="headerlink" title="tsconfig.json"></a>tsconfig.json</h3><p>如果一个目录下存在一个tsconfig.json文件，那么它意味着这个目录是TypeScript项目的根目录。<br>tsconfig.json文件中指定了用来编译这个项目的根文件和编译选项。</p>
