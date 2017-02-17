@@ -79,7 +79,7 @@ var _hmt = _hmt || [];
     </p>
   <p class="article-time">
     <time datetime="2017-02-17T13:00:15.000Z" itemprop="datePublished">2017-02-17</time>
-    更新日期:<time datetime="2017-02-17T13:48:22.654Z" itemprop="dateModified">2017-02-17</time>
+    更新日期:<time datetime="2017-02-17T13:57:21.618Z" itemprop="dateModified">2017-02-17</time>
     
   </p>
 </header>
@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
 <p>旋转关节即相当于将两个物体用钉子钉在一起，两个物体都可以绕这颗钉子旋转。当然，如果其中一个物体为地面的话，就相当于将物体钉在地面上，物体都可以绕这颗钉子旋转。</p>
 <h3 id="b2RevoluteJointDef"><a href="#b2RevoluteJointDef" class="headerlink" title="b2RevoluteJointDef"></a>b2RevoluteJointDef</h3><p>首先创建两个物体，然后将它们放在世界里，使用基类b2RevoluteJointDef创建一个旋转关节，设定铰接点，及旋转关节连接的是哪两个物体之后即可将其放入到世界里。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> jointDefRevolute = <span class="keyword">new</span> b2RevoluteJointDef();  <span class="comment">//创建一个旋转关节jointDefRevolute</span></div><div class="line">jointDefRevolute.anchorPoint.Set(<span class="number">450</span>, <span class="number">450</span>);       <span class="comment">//设定铰接点坐标</span></div><div class="line">jointDefRevolute.body1 = Body1;                   <span class="comment">//设定旋转关节一端连接Body1</span></div><div class="line">jointDefRevolute.body2 = Body2;                   <span class="comment">//设定旋转关节另一端连接Body2</span></div><div class="line"><span class="keyword">var</span> jointRevolute= world.CreateJoint(jointDefRevolute);     <span class="comment">//将旋转关节放入世界中</span></div><div class="line">jointRevolute.SetMotorSpeed(<span class="number">100</span>);           <span class="comment">//设置旋转关节马达的速度</span></div></pre></td></tr></table></figure>
-<h3 id="返回总目录"><a href="#返回总目录" class="headerlink" title="返回总目录"></a><a href="/2017/02/17/box2d-tutorial-0-catalog">返回总目录</a></h3>  
+<h3 id="返回总目录"><a href="#返回总目录" class="headerlink" title="返回总目录"></a><a href="/2017/02/17/box2d-tutorial-0-catalog/">返回总目录</a></h3>  
 	</div>
 	<div class="author-right">
   		<p>作者：被删</p>
