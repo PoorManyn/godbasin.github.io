@@ -3,7 +3,8 @@
 ---      
 
 ### Angular1-free    
-> [《玩转Angular1(6)--ui-router与嵌套路由》](https://godbasin.github.io/2017/02/25/angular-free-6-ui-router-in-angular/)  
+> [《玩转Angular1(7)--异步提交表单（文件）服务》](https://godbasin.github.io/2017/02/26/angular-free-7-async-form-submit/)   
+> [《玩转Angular1(6)--ui-router与嵌套路由》](https://godbasin.github.io/2017/02/25/angular-free-6-ui-router-in-angular/)   
 > [《玩转Angular1(5)--$http服务封装为异常处理服务》](https://godbasin.github.io/2017/02/24/angular-free-5-http-error-code-handle/)  
 > [《玩转Angular1(4)--使用class写控制器》](https://godbasin.github.io/2017/02/19/angular-free-4-create-controller-with-class/)  
 > [《玩转Angular1(3)--在Angular中使用Typescript》](https://godbasin.github.io/2017/02/12/angular-free-3-typescript-in-angular/)  
