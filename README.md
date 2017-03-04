@@ -3,6 +3,7 @@
 ---      
 
 ### Angular1-free    
+> [《玩转Angular1(8)--$q.all与async/await》](https://godbasin.github.io/2017/03/04/angular-free-8-q-service-and-async-await/)   
 > [《玩转Angular1(7)--异步提交表单（文件）服务》](https://godbasin.github.io/2017/02/26/angular-free-7-async-form-submit/)   
 > [《玩转Angular1(6)--ui-router与嵌套路由》](https://godbasin.github.io/2017/02/25/angular-free-6-ui-router-in-angular/)   
 > [《玩转Angular1(5)--$http服务封装为异常处理服务》](https://godbasin.github.io/2017/02/24/angular-free-5-http-error-code-handle/)  
