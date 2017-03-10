@@ -3,6 +3,7 @@
 ---      
 
 ### Angular1-free  
+> [《玩转Angular1(10)--使用Directive指令来添加事件监听》](https://godbasin.github.io/2017/03/10/angular-free-10-directive-to-add-event-listener/)     
 > [《玩转Angular1(9)--按键事件队列KeyUp服务》](https://godbasin.github.io/2017/03/05/angular-free-9-event-callback-queue/)     
 > [《玩转Angular1(8)--$q.all与async/await》](https://godbasin.github.io/2017/03/04/angular-free-8-q-service-and-async-await/)   
 > [《玩转Angular1(7)--异步提交表单（文件）服务》](https://godbasin.github.io/2017/02/26/angular-free-7-async-form-submit/)   
