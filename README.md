@@ -3,6 +3,8 @@
 ---      
 
 ### Angular1-free  
+> [《玩转Angular1(12)--创建日期选择组件》](https://godbasin.github.io/2017/03/12/angular-free-12-create-date-select-directive/)     
+> [《玩转Angular1(11)--组件的自我修养》](https://godbasin.github.io/2017/03/11/angular-free-11-how-to-be-a-directive/)     
 > [《玩转Angular1(10)--使用Directive指令来添加事件监听》](https://godbasin.github.io/2017/03/10/angular-free-10-directive-to-add-event-listener/)     
 > [《玩转Angular1(9)--按键事件队列KeyUp服务》](https://godbasin.github.io/2017/03/05/angular-free-9-event-callback-queue/)     
 > [《玩转Angular1(8)--$q.all与async/await》](https://godbasin.github.io/2017/03/04/angular-free-8-q-service-and-async-await/)   
