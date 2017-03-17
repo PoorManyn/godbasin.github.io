@@ -2,7 +2,8 @@
 被删前端博客   
 ---      
 
-### Angular1-free  
+### Angular1-free    
+> [《玩转Angular1(13)--服务与指令的配合使用》](https://godbasin.github.io/2017/03/18/angular-free-13-service-work-with-directive/)     
 > [《玩转Angular1(12)--创建日期选择组件》](https://godbasin.github.io/2017/03/12/angular-free-12-create-date-select-directive/)     
 > [《玩转Angular1(11)--组件的自我修养》](https://godbasin.github.io/2017/03/11/angular-free-11-how-to-be-a-directive/)     
 > [《玩转Angular1(10)--使用Directive指令来添加事件监听》](https://godbasin.github.io/2017/03/10/angular-free-10-directive-to-add-event-listener/)     
