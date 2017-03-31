@@ -3,6 +3,7 @@
 ---      
 
 ### Angular1-free    
+> [《玩转Angular1(17)--脚本自动更新并注册指令》](https://godbasin.github.io/2017/03/31/angular-free-17-auto-generate-and-inject-directive/)     
 > [《玩转Angular1(16)--常用的angular方法》](https://godbasin.github.io/2017/03/25/angular-free-16-common-angular-function/)     
 > > [《玩转Angular1(15)--指令们的相互协作》](https://godbasin.github.io/2017/03/24/angular-free-15-cooperation-between-directives/)     
 > [《玩转Angular1(14)--使用$compile编译指令》](https://godbasin.github.io/2017/03/19/angular-free-14-angular-compile-directive/)     
