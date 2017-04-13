@@ -1,7 +1,9 @@
 # [godbasin.github.io](https://godbasin.github.io)   
 被删前端博客   
 ---      
-
+### three.js笔记    
+> [《three.js笔记1--初始化3D世界》](https://godbasin.github.io/2017/04/13/three-notes-1-init-3d-world/)     
+> 
 ### Angular1-free    
 > [《玩转Angular1(18)--使用mock本地数据模拟》](https://godbasin.github.io/2017/04/03/angular-free-18-use-angular-mock/)     
 > [《玩转Angular1(17)--脚本自动更新并注册指令》](https://godbasin.github.io/2017/03/31/angular-free-17-auto-generate-and-inject-directive/)     
