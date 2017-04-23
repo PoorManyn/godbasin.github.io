@@ -2,6 +2,7 @@
 被删前端博客   
 ---      
 ### three.js笔记    
+> [《three.js笔记4--添加按键移动》](https://godbasin.github.io/2017/04/23/three-notes-4-add-keypress-move/)   
 > [《three.js笔记3--添加光源》](https://godbasin.github.io/2017/04/22/three-notes-3-add-light-source/)   
 > [《three.js笔记2--添加物体》](https://godbasin.github.io/2017/04/16/three-notes-2-add-objects/)     
 > [《three.js笔记1--初始化3D世界》](https://godbasin.github.io/2017/04/13/three-notes-1-init-3d-world/)     
