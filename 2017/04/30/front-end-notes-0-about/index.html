@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>前端在变，然而热情不变 | Here. There.</title>
+    <title>前端阶段性总结之「总览整理」 | Here. There.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="被删">
     
-    <meta name="description" content="本文作为本骚年正式开始技术博客的开篇，当然先渲染一下快乐的氛围。接着会大致介绍搭建这个博客的步骤。">
+    <meta name="description" content="前段时间恶补了自己还缺乏的一些前端知识体系，并做了些整理，《前端满汉全席系列》主要用于分享。后续若有其他相关的，也会一并添加进来。">
     
     
     
@@ -71,15 +71,15 @@ var _hmt = _hmt || [];
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/06/18/first-blog/" title="前端在变，然而热情不变" itemprop="url">前端在变，然而热情不变</a>
+      <a href="/2017/04/30/front-end-notes-0-about/" title="前端阶段性总结之「总览整理」" itemprop="url">前端阶段性总结之「总览整理」</a>
   </h1>
   <p class="article-author">By
     
       <a href="https://godbasin.github.io" title="被删">被删</a>
     </p>
   <p class="article-time">
-    <time datetime="2016-06-17T19:59:57.000Z" itemprop="datePublished">2016-06-18</time>
-    更新日期:<time datetime="2016-08-20T10:54:21.077Z" itemprop="dateModified">2016-08-20</time>
+    <time datetime="2017-04-29T23:11:43.000Z" itemprop="datePublished">2017-04-30</time>
+    更新日期:<time datetime="2017-04-29T23:16:03.246Z" itemprop="dateModified">2017-04-30</time>
     
   </p>
 </header>
@@ -88,39 +88,228 @@ var _hmt = _hmt || [];
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#首先为第一篇博客开心一下"><span class="toc-number">1.</span> <span class="toc-text">首先为第一篇博客开心一下</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">2.</span> <span class="toc-text">参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建步骤"><span class="toc-number">3.</span> <span class="toc-text">搭建步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#注册一个github账户"><span class="toc-number">3.1.</span> <span class="toc-text">注册一个github账户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建github-pages"><span class="toc-number">3.2.</span> <span class="toc-text">创建github pages</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#装载Hexo"><span class="toc-number">3.3.</span> <span class="toc-text">装载Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择自己喜欢的主题"><span class="toc-number">3.4.</span> <span class="toc-text">选择自己喜欢的主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对模板和样式进行修改"><span class="toc-number">3.5.</span> <span class="toc-text">对模板和样式进行修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择喜欢的插件和挂件，统计等"><span class="toc-number">3.6.</span> <span class="toc-text">选择喜欢的插件和挂件，统计等</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#部署到github上"><span class="toc-number">3.7.</span> <span class="toc-text">部署到github上</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#此处粘贴Hexo常用命令"><span class="toc-number">4.</span> <span class="toc-text">此处粘贴Hexo常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">5.</span> <span class="toc-text">结束语</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前端基础"><span class="toc-number">1.</span> <span class="toc-text">前端基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#入门手册和文档"><span class="toc-number">1.1.</span> <span class="toc-text">入门手册和文档</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#javascript"><span class="toc-number">1.2.</span> <span class="toc-text">javascript</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-CSS"><span class="toc-number">1.3.</span> <span class="toc-text">HTML/CSS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前端框架和工具"><span class="toc-number">2.</span> <span class="toc-text">前端框架和工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#前端框架"><span class="toc-number">2.1.</span> <span class="toc-text">前端框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#前端工具"><span class="toc-number">2.2.</span> <span class="toc-text">前端工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设计和封装"><span class="toc-number">2.3.</span> <span class="toc-text">设计和封装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web相关知识"><span class="toc-number">3.</span> <span class="toc-text">Web相关知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP"><span class="toc-number">3.1.</span> <span class="toc-text">HTTP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Web安全"><span class="toc-number">3.2.</span> <span class="toc-text">Web安全</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#身为程序员"><span class="toc-number">4.</span> <span class="toc-text">身为程序员</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#算法相关"><span class="toc-number">4.1.</span> <span class="toc-text">算法相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编码相关"><span class="toc-number">4.2.</span> <span class="toc-text">编码相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计算机系统"><span class="toc-number">4.3.</span> <span class="toc-text">计算机系统</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">5.</span> <span class="toc-text">结束语</span></a></li></ol>
 		</div>
 		
-		<p>本文作为本骚年正式开始技术博客的开篇，当然先渲染一下快乐的氛围。接着会大致介绍搭建这个博客的步骤。<br><a id="more"></a></p>
-<h2 id="首先为第一篇博客开心一下"><a href="#首先为第一篇博客开心一下" class="headerlink" title="首先为第一篇博客开心一下"></a>首先为第一篇博客开心一下</h2><hr>
-<p>或许在两个月前，本骚年还生活在远离github以及各种社区论坛的宅世界里。但即使是那样一个几乎与世隔绝的环境下，也依然满怀学习前端的热情。<br><!----><br>那时候做的事情不多，基本是些与jQuery打架，努力想解剖它，最后又握手言和的过家家。<br><!----><br>工作原因慢慢用上一些工具，也挑战自己上了框架、试着对代码进行抽离又封装，到如今在小伙伴的怂恿下试着在github搭博客。<br><!----><br>进步不得说不大，对于懒癌晚期只沉迷于学习远离、学习代码解析的骚年来说，各种各样的工具毫无疑问又增加了需要学习的范围。但，既来之则安之，有句话叫学无止境不是吗，要相信自己，哈哈。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><hr>
-<p>关于创建github博客：<br><a href="http://blog.csdn.net/renfufei/article/details/37725057/" target="_blank" rel="external">http://blog.csdn.net/renfufei/article/details/37725057</a><br>Hexo搭建博客教程:<br><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">http://ibruce.info/2013/11/22/hexo-your-blog</a><br>知乎：Hexo好看的主题：<br><a href="https://www.zhihu.com/question/24422335" target="_blank" rel="external">https://www.zhihu.com/question/24422335</a></p>
-<h2 id="搭建步骤"><a href="#搭建步骤" class="headerlink" title="搭建步骤"></a>搭建步骤</h2><hr>
-<h3 id="注册一个github账户"><a href="#注册一个github账户" class="headerlink" title="注册一个github账户"></a>注册一个github账户</h3><h3 id="创建github-pages"><a href="#创建github-pages" class="headerlink" title="创建github pages"></a>创建github pages</h3><blockquote>
-<p>具体可参考Hexo搭建博客教程:<br><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">http://ibruce.info/2013/11/22/hexo-your-blog</a></p>
-</blockquote>
-<h3 id="装载Hexo"><a href="#装载Hexo" class="headerlink" title="装载Hexo"></a>装载Hexo</h3><blockquote>
-<p>该过程需要安装node以及Git，具体可参考Hexo搭建博客教程:<br><a href="http://ibruce.info/2013/11/22/hexo-your-blog/" target="_blank" rel="external">http://ibruce.info/2013/11/22/hexo-your-blog</a></p>
-</blockquote>
-<h3 id="选择自己喜欢的主题"><a href="#选择自己喜欢的主题" class="headerlink" title="选择自己喜欢的主题"></a>选择自己喜欢的主题</h3><blockquote>
-<p>Hexo主题可参考知乎：Hexo好看的主题：<br><a href="https://www.zhihu.com/question/24422335" target="_blank" rel="external">https://www.zhihu.com/question/24422335</a></p>
-</blockquote>
-<h3 id="对模板和样式进行修改"><a href="#对模板和样式进行修改" class="headerlink" title="对模板和样式进行修改"></a>对模板和样式进行修改</h3><blockquote>
-<p>Hexo装载的模板为ejs，炒鸡好懂的</p>
-</blockquote>
-<h3 id="选择喜欢的插件和挂件，统计等"><a href="#选择喜欢的插件和挂件，统计等" class="headerlink" title="选择喜欢的插件和挂件，统计等"></a>选择喜欢的插件和挂件，统计等</h3><blockquote>
-<p>Hexo搭建博客教程里面有提及相关的部署</p>
-</blockquote>
-<h3 id="部署到github上"><a href="#部署到github上" class="headerlink" title="部署到github上"></a>部署到github上</h3><blockquote>
-<p>设置./_config.yml中Deployment相关，然后hexo deploy<br>注意请先生成静态文件再进行部署哦<br>若部署失败提示’ERROR Deployer not found: github’, 是因为Hexo3.0以后type需要改成git<br>1.安装 npm install hexo-deployer-git –save<br>2.将deploy 的 type由github改为git</p>
-</blockquote>
-<h2 id="此处粘贴Hexo常用命令"><a href="#此处粘贴Hexo常用命令" class="headerlink" title="此处粘贴Hexo常用命令"></a>此处粘贴Hexo常用命令</h2><hr>
-<blockquote>
-<p>hexo new “postName”  —新建文章<br>hexo new page “pageName”  —新建页面<br>hexo clean  —清除缓存 网页正常情况下可以忽略此条命令<br>hexo generate  —生成静态页面至public目录<br>hexo server  —开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br>hexo deploy  —将.deploy目录部署到GitHub</p>
-</blockquote>
+		<p>前段时间恶补了自己还缺乏的一些前端知识体系，并做了些整理，《前端满汉全席系列》主要用于分享。后续若有其他相关的，也会一并添加进来。<br><a id="more"></a></p>
+<h2 id="前端基础"><a href="#前端基础" class="headerlink" title="前端基础"></a>前端基础</h2><hr>
+<p>补上曾经整理过的一篇<a href="https://godbasin.github.io/2016/06/24/front-end-getting-started/">《我的前端入门之路》</a>，对比起来这篇还比较枯燥呢。</p>
+<h3 id="入门手册和文档"><a href="#入门手册和文档" class="headerlink" title="入门手册和文档"></a>入门手册和文档</h3><p>一般来说，入门的话，不管是html/css，还是javascript，都能从<a href="http://www.w3school.com.cn" target="_blank" rel="external">w3c</a>和<a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="external">mdn</a>上找到。<br>相对地说，mdn会更加详细和明确一些，也涉及不少较深入的内容呢。</p>
+<h3 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h3><p>在本骚年看来，javascript是最基本也是最重要的呢。即使现在的框架和工具让你眼花缭乱，不过万变不离其宗，javascript依然是我们最需要深入学习和理解的一门技能吧。</p>
+<ul>
+<li><p>本骚年看过的一些书：</p>
+<ul>
+<li>《javascript高级程序设计》</li>
+<li>《javascript权威指南》</li>
+<li>《javascript数据结构》</li>
+<li>…</li>
+</ul>
+</li>
+<li><p>掌握javascript</p>
+<ul>
+<li>基本语法和使用</li>
+<li>原型和继承</li>
+<li>闭包</li>
+<li>作用域/原型链</li>
+<li>this和上下文</li>
+<li>DOM对象</li>
+<li>BOM对象</li>
+<li>ajax/XHR</li>
+<li>正则表达式</li>
+</ul>
+</li>
+<li><p>深入了解javascript</p>
+<ul>
+<li>单线程的javascript</li>
+<li>事件循环Eventloop</li>
+<li>javascript的装载和执行</li>
+<li>事件冒泡/捕获、事件委托</li>
+<li>javascript设计模式</li>
+<li>面向对象编程</li>
+</ul>
+</li>
+<li><p>javascript新特性</p>
+<ul>
+<li>ES6/ES7</li>
+<li>Promise</li>
+<li>fetch</li>
+<li>PWA(Progressive Web Apps)</li>
+<li>WebAssembly</li>
+<li>Rxjs</li>
+</ul>
+</li>
+</ul>
+<h3 id="HTML-CSS"><a href="#HTML-CSS" class="headerlink" title="HTML/CSS"></a>HTML/CSS</h3><p>虽然很多时候对javascript考验更多，但是其实HTML和CSS也并不只是很基础和简单的。</p>
+<ul>
+<li><p>HTML5新特性</p>
+<ul>
+<li>Web Worker/Service Worker</li>
+<li>LocalStorage/SessionStorage</li>
+<li>Canvas</li>
+<li>History</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/HTML5" target="_blank" rel="external">…</a></li>
+</ul>
+</li>
+<li><p>掌握CSS</p>
+<ul>
+<li>文档流</li>
+<li>盒子模型</li>
+<li>布局（居中）</li>
+<li>BFC/IFC</li>
+<li>CSS3新特性</li>
+<li>CSS动画</li>
+<li>CSS规范（BEM等）</li>
+</ul>
+</li>
+<li><p>浏览器渲染</p>
+<ul>
+<li>浏览器渲染机制</li>
+<li>reflow和repaint</li>
+<li>CSS匹配规则/效率</li>
+</ul>
+</li>
+</ul>
+<h2 id="前端框架和工具"><a href="#前端框架和工具" class="headerlink" title="前端框架和工具"></a>前端框架和工具</h2><hr>
+<h3 id="前端框架"><a href="#前端框架" class="headerlink" title="前端框架"></a>前端框架</h3><p>前端框架可以说是层出不穷的，本骚年也就只涉及几个而已。</p>
+<ul>
+<li><p>涉及框架</p>
+<ul>
+<li>angular1.x</li>
+<li>angular2</li>
+<li>react(+redux)</li>
+<li>vue</li>
+<li>…</li>
+</ul>
+</li>
+<li><p>关于框架</p>
+<ul>
+<li>MVC/MVVM</li>
+<li>模板引擎原理</li>
+<li>数据流处理(Flux/Redux/Mobx)</li>
+<li>虚拟DOM</li>
+<li>数据绑定原理</li>
+<li>路由控制</li>
+<li>框架的区别和选型</li>
+<li>…</li>
+</ul>
+</li>
+</ul>
+<h3 id="前端工具"><a href="#前端工具" class="headerlink" title="前端工具"></a>前端工具</h3><p>关于前端安装部署、热更新、打包等等，也已经有了一系列的相关工具。</p>
+<ul>
+<li><p>安装工具</p>
+<ul>
+<li>node</li>
+<li>npm</li>
+</ul>
+</li>
+<li><p>构建工具</p>
+<ul>
+<li>Grunt</li>
+<li>Gulp</li>
+<li>Webpack</li>
+<li>Babel</li>
+</ul>
+</li>
+<li><p>校验工具</p>
+<ul>
+<li>Typescript</li>
+</ul>
+</li>
+<li><p>测试工具</p>
+<ul>
+<li>断言库(Mocha/Jasmine)</li>
+<li>Runner(Karma)</li>
+</ul>
+</li>
+</ul>
+<h3 id="设计和封装"><a href="#设计和封装" class="headerlink" title="设计和封装"></a>设计和封装</h3><p>基本的程序员素质–设计抽象，以及前端的组件封装。</p>
+<h2 id="Web相关知识"><a href="#Web相关知识" class="headerlink" title="Web相关知识"></a>Web相关知识</h2><hr>
+<h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><p>身为一个前端，http相关的知识也是需要熟练使用的呢。</p>
+<ul>
+<li><p>HTTP入门</p>
+<ul>
+<li>完整的HTTP请求</li>
+<li>TCP/UDP/IP(TCP的三次握手/四次挥手)</li>
+<li>DNS域名解析(DNS寻址过程)</li>
+<li>CDN</li>
+<li>HTTP协议解析(request/response)</li>
+<li>HTTP常见状态码</li>
+<li>GET/POST/…(Restful)</li>
+</ul>
+</li>
+<li><p>理解HTTP</p>
+<ul>
+<li>HTTP无连接与无状态</li>
+<li>HTTP缓存机制</li>
+<li>会话跟踪(Session/Cookie)</li>
+<li>HTTP与Websocket</li>
+<li>HTTP压缩</li>
+<li>HTTPS/HTTP2</li>
+<li>浏览器同源政策与跨域请求</li>
+</ul>
+</li>
+<li><p>HTTP头属性</p>
+<ul>
+<li>缓存相关(Expires/Cache-Control/Progma/Etag/Modified/…)</li>
+<li>Websocket相关(Upgrade/Connection)</li>
+<li>跨域CORS相关(Origin/Access-Control-*)</li>
+<li>Cookie相关(Set-Cookie/Cookie)</li>
+<li>host/referer</li>
+<li>…</li>
+</ul>
+</li>
+</ul>
+<h3 id="Web安全"><a href="#Web安全" class="headerlink" title="Web安全"></a>Web安全</h3><p>对于Web安全，也有很多是需要知道的。</p>
+<ul>
+<li>XSS攻击</li>
+<li>CSRF攻击</li>
+<li>运营商劫持</li>
+<li>其他攻击(各环节脚本注入/钓鱼网站/…)</li>
+</ul>
+<h2 id="身为程序员"><a href="#身为程序员" class="headerlink" title="身为程序员"></a>身为程序员</h2><hr>
+<h3 id="算法相关"><a href="#算法相关" class="headerlink" title="算法相关"></a>算法相关</h3><p>非科班的自己，也有很多身为程序员的基本素质需要补上。（这块还不是特别熟练，如果有写的不对望指出）</p>
+<ul>
+<li><p>常用算法</p>
+<ul>
+<li>排序算法</li>
+<li>递归</li>
+<li>分治策略</li>
+<li>归并算法</li>
+<li>…</li>
+</ul>
+</li>
+<li><p>数据结构</p>
+<ul>
+<li>链表</li>
+<li>二叉树</li>
+<li>散列表</li>
+<li>…</li>
+</ul>
+</li>
+</ul>
+<h3 id="编码相关"><a href="#编码相关" class="headerlink" title="编码相关"></a>编码相关</h3><ul>
+<li><p>常见编码</p>
+<ul>
+<li>压缩编码</li>
+<li>Base64编码</li>
+<li>哈希算法</li>
+<li>URL编码</li>
+</ul>
+</li>
+<li><p>计算机加密算法</p>
+<ul>
+<li>对称加密算法</li>
+<li>DH密钥交换算法</li>
+<li>非对称加密算法</li>
+</ul>
+</li>
+</ul>
+<h3 id="计算机系统"><a href="#计算机系统" class="headerlink" title="计算机系统"></a>计算机系统</h3><ul>
+<li>计算机系统深入理解</li>
+<li>现代计算机系统</li>
+</ul>
 <h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><hr>
-<p>然后一不小心就玩通宵了，赶紧补眠去。<br>Good Day!</p>
+<p>该文主要用于自我整理一些东西，虽然还不是特别完整，也不是很全面。不过作为自己的阶段性总结，如果能对大家有帮助就更好啦。</p>
   
 	</div>
 	<div class="author-right">
@@ -132,20 +321,20 @@ var _hmt = _hmt || [];
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/教程/">教程</a>
+  <span></span> <a href="/tags/分享/">分享</a>
   </div>
 
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/web乱炖/">web乱炖</a>
+  <a class="article-category-link" href="/categories/前端满汉全席/">前端满汉全席</a>
 </div>
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="https://godbasin.github.io/2016/06/18/first-blog/" data-title="前端在变，然而热情不变 | Here. There." data-tsina="null" class="share clearfix">
+  <div data-url="https://godbasin.github.io/2017/04/30/front-end-notes-0-about/" data-title="前端阶段性总结之「总览整理」 | Here. There." data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -154,14 +343,14 @@ var _hmt = _hmt || [];
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/06/19/position-object/" title="js判断某个位置是否特定元素">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  js判断某个位置是否特定元素</span>
+
+<div class="next">
+<a href="/2017/04/29/three-notes-5-add-mouse-move/"  title="three.js笔记5--添加鼠标移动视角">
+ <strong>NEXT:</strong><br/> 
+ <span>three.js笔记5--添加鼠标移动视角
+</span>
 </a>
 </div>
-
 
 </nav>
 
@@ -175,7 +364,7 @@ var _hmt = _hmt || [];
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#首先为第一篇博客开心一下"><span class="toc-number">1.</span> <span class="toc-text">首先为第一篇博客开心一下</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">2.</span> <span class="toc-text">参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建步骤"><span class="toc-number">3.</span> <span class="toc-text">搭建步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#注册一个github账户"><span class="toc-number">3.1.</span> <span class="toc-text">注册一个github账户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建github-pages"><span class="toc-number">3.2.</span> <span class="toc-text">创建github pages</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#装载Hexo"><span class="toc-number">3.3.</span> <span class="toc-text">装载Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择自己喜欢的主题"><span class="toc-number">3.4.</span> <span class="toc-text">选择自己喜欢的主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对模板和样式进行修改"><span class="toc-number">3.5.</span> <span class="toc-text">对模板和样式进行修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择喜欢的插件和挂件，统计等"><span class="toc-number">3.6.</span> <span class="toc-text">选择喜欢的插件和挂件，统计等</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#部署到github上"><span class="toc-number">3.7.</span> <span class="toc-text">部署到github上</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#此处粘贴Hexo常用命令"><span class="toc-number">4.</span> <span class="toc-text">此处粘贴Hexo常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">5.</span> <span class="toc-text">结束语</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前端基础"><span class="toc-number">1.</span> <span class="toc-text">前端基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#入门手册和文档"><span class="toc-number">1.1.</span> <span class="toc-text">入门手册和文档</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#javascript"><span class="toc-number">1.2.</span> <span class="toc-text">javascript</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-CSS"><span class="toc-number">1.3.</span> <span class="toc-text">HTML/CSS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前端框架和工具"><span class="toc-number">2.</span> <span class="toc-text">前端框架和工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#前端框架"><span class="toc-number">2.1.</span> <span class="toc-text">前端框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#前端工具"><span class="toc-number">2.2.</span> <span class="toc-text">前端工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设计和封装"><span class="toc-number">2.3.</span> <span class="toc-text">设计和封装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web相关知识"><span class="toc-number">3.</span> <span class="toc-text">Web相关知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP"><span class="toc-number">3.1.</span> <span class="toc-text">HTTP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Web安全"><span class="toc-number">3.2.</span> <span class="toc-text">Web安全</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#身为程序员"><span class="toc-number">4.</span> <span class="toc-text">身为程序员</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#算法相关"><span class="toc-number">4.1.</span> <span class="toc-text">算法相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编码相关"><span class="toc-number">4.2.</span> <span class="toc-text">编码相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计算机系统"><span class="toc-number">4.3.</span> <span class="toc-text">计算机系统</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">5.</span> <span class="toc-text">结束语</span></a></li></ol>
   </div>
 
 <div id="asidepart">
