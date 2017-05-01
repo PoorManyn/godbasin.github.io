@@ -1,6 +1,11 @@
 # [godbasin.github.io](https://godbasin.github.io)   
 被删前端博客   
 ---      
+
+### 前端阶段性总结      
+> [《前端阶段性总结之「掌握javascript」》](https://godbasin.github.io/2017/05/01/front-end-notes-1-init-javascript/)      
+> [《前端阶段性总结之「总览整理」》](https://godbasin.github.io/2017/04/30/front-end-notes-0-about/)      
+
 ### three.js笔记    
 > [《three.js笔记5--添加鼠标移动视角》](https://godbasin.github.io/2017/04/29/three-notes-5-add-mouse-move/)   
 > [《three.js笔记4--添加按键移动》](https://godbasin.github.io/2017/04/23/three-notes-4-add-keypress-move/)   
