@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Box2DJS教程7--api | Here. There.</title>
+    <title>前端阶段性总结之「深入javascript」 | Here. There.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="被删">
     
-    <meta name="description" content="第七章主要介绍api。">
+    <meta name="description" content="该篇主要整理javascript的部分深入理解，以及一些分享。">
     
     
     
@@ -71,15 +71,15 @@ var _hmt = _hmt || [];
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/02/17/box2d-tutorial-7-0-api/" title="Box2DJS教程7--api" itemprop="url">Box2DJS教程7--api</a>
+      <a href="/2017/05/06/front-end-notes-2-deep-into-javascript/" title="前端阶段性总结之「深入javascript」" itemprop="url">前端阶段性总结之「深入javascript」</a>
   </h1>
   <p class="article-author">By
     
       <a href="https://godbasin.github.io" title="被删">被删</a>
     </p>
   <p class="article-time">
-    <time datetime="2017-02-17T13:00:31.000Z" itemprop="datePublished">2017-02-17</time>
-    更新日期:<time datetime="2017-02-17T13:57:11.348Z" itemprop="dateModified">2017-02-17</time>
+    <time datetime="2017-05-06T09:35:50.000Z" itemprop="datePublished">2017-05-06</time>
+    更新日期:<time datetime="2017-05-06T09:36:11.988Z" itemprop="dateModified">2017-05-06</time>
     
   </p>
 </header>
@@ -88,23 +88,60 @@ var _hmt = _hmt || [];
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Box2D-api"><span class="toc-number">1.</span> <span class="toc-text">Box2D api</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Box2D分类"><span class="toc-number">1.1.</span> <span class="toc-text">Box2D分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#目录"><span class="toc-number">1.2.</span> <span class="toc-text">目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#返回总目录"><span class="toc-number">1.3.</span> <span class="toc-text">返回总目录</span></a></li></ol></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#深入理解javascript"><span class="toc-number">1.</span> <span class="toc-text">深入理解javascript</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#单线程与Event-Loop"><span class="toc-number">1.1.</span> <span class="toc-text">单线程与Event Loop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#浏览器机制"><span class="toc-number">1.2.</span> <span class="toc-text">浏览器机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#javascript设计模式"><span class="toc-number">1.3.</span> <span class="toc-text">javascript设计模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">2.</span> <span class="toc-text">结束语</span></a></li></ol>
 		</div>
 		
-		<p>第七章主要介绍api。<br><a id="more"></a></p>
-<h2 id="Box2D-api"><a href="#Box2D-api" class="headerlink" title="Box2D api"></a>Box2D api</h2><hr>
-<h3 id="Box2D分类"><a href="#Box2D分类" class="headerlink" title="Box2D分类"></a>Box2D分类</h3><p>Box2D所有的api可参照<a href="http://www.kyucon.com/doc/box2d/" target="_blank" rel="external">Box2D_api</a>。</p>
-<p>可发现，Box2D具体分为三大类：</p>
+		<p>该篇主要整理javascript的部分深入理解，以及一些分享。<br><a id="more"></a></p>
+<h2 id="深入理解javascript"><a href="#深入理解javascript" class="headerlink" title="深入理解javascript"></a>深入理解javascript</h2><hr>
+<h3 id="单线程与Event-Loop"><a href="#单线程与Event-Loop" class="headerlink" title="单线程与Event Loop"></a>单线程与Event Loop</h3><p>单线程这样的概念，其实本骚年在被问到之前一直是模糊的。</p>
+<p>当然这也是因为非科班，对线程、进程这些都不曾真正去了解和学习过，至于单线程，最大的感受就是异步事件、回调等等。</p>
+<p>你有想过为什么javascript是单线程的吗？其实更多是因为对页面交互的同步处理吧，具体大家可以参考一下<a href="http://www.ruanyifeng.com/blog/2014/10/event-loop.html" target="_blank" rel="external">《JavaScript 运行机制详解：再谈Event Loop》</a>。</p>
 <ul>
-<li>碰撞类(collision)：碰撞模块定义了形状，broad-phase算法，碰撞的功能/查询</li>
-<li>基础类(common)：包括基础系统配置、数据类型、基础数学运算</li>
-<li>动力学类(dynamics)：包括模拟物理世界，刚体(body)，接触管理(contacts)，以及关节(joint)</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/EventLoop" target="_blank" rel="external">并发模型与Event Loop</a></li>
 </ul>
-<p>具体的说明是个人整理的，有些参照网上资源，可能不完整且有偏差。</p>
-<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ol>
-<li>api<br><a href="/2017/02/17/box2d-tutorial-7-1-common-api/">7.1 碰撞类(collision)</a><br><a href="/2017/02/17/box2d-tutorial-7-2-collisions-api/">7.2 基础类(common)</a><br><a href="/2017/02/17/box2d-tutorial-7-3-dynamics-api/">7.3 动力学类(dynamics)</a>     </li>
+<p>这里我们需要知道事件循环event loop、栈与队列、主线程等等，当我们继续查阅文章的时候，会涉及到其他的概念如宏任务和微任务。</p>
+<ul>
+<li>microtask与macrotask</li>
+</ul>
+<p>关于宏任务和微任务，其实大致有个了解就差不多了，在我们编码过程遇到相关的问题时，再针对性地去研究吧。或者大家也可以看看一些文章：<br><a href="https://juejin.im/entry/58332d560ce46300610e4bad" target="_blank" rel="external">《理解 js 事件循环二 (macrotask 和 microtask)》</a><br><a href="https://zhuanlan.zhihu.com/p/24460769" target="_blank" rel="external">《HTML系列：macrotask和microtask》</a></p>
+<p>思考问题：</p>
+<ol>
+<li>简单描述Event Loop过程。</li>
+<li>为什么javascript是单线程的？单线程与多线程的区别？</li>
 </ol>
-<h3 id="返回总目录"><a href="#返回总目录" class="headerlink" title="返回总目录"></a><a href="/2017/02/17/box2d-tutorial-0-catalog/">返回总目录</a></h3>  
+<h3 id="浏览器机制"><a href="#浏览器机制" class="headerlink" title="浏览器机制"></a>浏览器机制</h3><p>身为前端，对浏览器的机制和深入理解，能成为性能优化的一大利器呢。</p>
+<ul>
+<li>浏览器渲染机制</li>
+</ul>
+<p>对于想做简单认识的，可以参考<a href="http://coolshell.cn/articles/9666.html" target="_blank" rel="external">《浏览器的渲染原理简介》</a>。想要深入理解的，可以看<a href="http://taligarsiel.com/Projects/howbrowserswork1.htm" target="_blank" rel="external">《How browsers work》</a>以及译文系列<a href="http://ued.ctrip.com/blog/how-browsers-work-i-basic-knowledge.html" target="_blank" rel="external">《浏览器是怎样工作的（一）：基础知识》</a>。</p>
+<p>这里面有几个概念需要理解，包括：Rendering tree渲染树、CSS规则树、Repaint和Reflow等等。</p>
+<p>思考问题：</p>
+<ol>
+<li>浏览器解析哪些文件，分别会生成什么？</li>
+<li>渲染树的生成过程。</li>
+<li>哪些行为会导致Reflow和Repaint？怎么规避/优化？</li>
+</ol>
+<ul>
+<li>javascript在浏览器中的加载</li>
+</ul>
+<p>浏览的渲染线程和JS执行线程是互斥的，并且JavaScript默认是阻塞加载的。对于这个过程，相关文章阅读<a href="http://coolshell.cn/articles/9749.html#jtss-tsina" target="_blank" rel="external">《JAVASCRIPT 装载和执行》</a>、<a href="http://delai.me/code/js-and-performance/" target="_blank" rel="external">《S一定要放在Body的最底部么？聊聊浏览器的渲染机制》</a>，或者谷歌查询。</p>
+<p>对于这个我们会经常遇到一些问题，如：</p>
+<ol>
+<li>为什么js要放在最后面加载？为什么css放前面？</li>
+<li>js的加载顺序，相关事件（如onload）的理解。</li>
+<li>优化首屏加载时间？</li>
+</ol>
+<ul>
+<li>页面的加载过程（从输入Url到页面加载完成）</li>
+<li>浏览器的缓存机制</li>
+<li>浏览器的同源政策与跨域</li>
+</ul>
+<p>其实上面这些内容更加涉及http相关多一些，但是其实http也是前端的一部分啦。这些统一放到后面http部分一起进行整理吧。</p>
+<h3 id="javascript设计模式"><a href="#javascript设计模式" class="headerlink" title="javascript设计模式"></a>javascript设计模式</h3><p>关于javascript的设计，其实跟大多数的编程语言都是相通的。很多时候我们都会使用，但是或许我们并没有什么感觉。<br>只是当项目越来越大，重复的代码或是杂乱的代码总会让我们开始对其进行整理、抽象、封装等等工作，便于拓展也提升了开发效率，同时对项目整体的理解也更加深入了。</p>
+<p>这里面本骚年也不想细说，感兴趣的大家可以参考<a href="http://www.alloyteam.com/2012/10/common-javascript-design-patterns/" target="_blank" rel="external">《【Javascript设计模式1】-单例模式》</a>系列文章，当然还有其他文章，找谷歌或者度娘去吧。<br>其实很多时候我们使用的一些插件、框架和库，里面就使用了很多的设计模式，大家不妨也可以多去了解一下。</p>
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><hr>
+<p>其实仔细研究javascript，总会发现你所不了解的角落。即使是本骚年所认为的深入理解，到头来也只是某个浅尝的部分，越是相处时间长了，越能发现其中的美妙和乐趣吧。</p>
+  
 	</div>
 	<div class="author-right">
   		<p>作者：被删</p>
@@ -115,20 +152,20 @@ var _hmt = _hmt || [];
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/教程/">教程</a>
+  <span></span> <a href="/tags/分享/">分享</a>
   </div>
 
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/box2djs方糖/">box2djs方糖</a>
+  <a class="article-category-link" href="/categories/前端满汉全席/">前端满汉全席</a>
 </div>
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="https://godbasin.github.io/2017/02/17/box2d-tutorial-7-0-api/" data-title="Box2DJS教程7--api | Here. There." data-tsina="null" class="share clearfix">
+  <div data-url="https://godbasin.github.io/2017/05/06/front-end-notes-2-deep-into-javascript/" data-title="前端阶段性总结之「深入javascript」 | Here. There." data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -137,19 +174,11 @@ var _hmt = _hmt || [];
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2017/02/17/box2d-tutorial-7-1-common-api/" title="Box2DJS教程7-1--common-api">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  Box2DJS教程7-1--common-api</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2017/02/17/box2d-tutorial-6-5-handle-contact/"  title="Box2DJS教程6-5--处理碰撞刚体">
+<a href="/2017/05/01/front-end-notes-1-init-javascript/"  title="前端阶段性总结之「掌握javascript」">
  <strong>NEXT:</strong><br/> 
- <span>Box2DJS教程6-5--处理碰撞刚体
+ <span>前端阶段性总结之「掌握javascript」
 </span>
 </a>
 </div>
@@ -166,7 +195,7 @@ var _hmt = _hmt || [];
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Box2D-api"><span class="toc-number">1.</span> <span class="toc-text">Box2D api</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Box2D分类"><span class="toc-number">1.1.</span> <span class="toc-text">Box2D分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#目录"><span class="toc-number">1.2.</span> <span class="toc-text">目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#返回总目录"><span class="toc-number">1.3.</span> <span class="toc-text">返回总目录</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#深入理解javascript"><span class="toc-number">1.</span> <span class="toc-text">深入理解javascript</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#单线程与Event-Loop"><span class="toc-number">1.1.</span> <span class="toc-text">单线程与Event Loop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#浏览器机制"><span class="toc-number">1.2.</span> <span class="toc-text">浏览器机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#javascript设计模式"><span class="toc-number">1.3.</span> <span class="toc-text">javascript设计模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">2.</span> <span class="toc-text">结束语</span></a></li></ol>
   </div>
 
 <div id="asidepart">
