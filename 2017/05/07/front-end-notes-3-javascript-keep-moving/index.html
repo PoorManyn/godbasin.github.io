@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>前端阶段性总结之「总览整理」 | Here. There.</title>
+    <title>前端阶段性总结之「javascript新特性」 | Here. There.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="被删">
     
-    <meta name="description" content="前段时间恶补了自己还缺乏的一些前端知识体系，并做了些整理，《前端满汉全席系列》主要用于分享。后续若有其他相关的，也会一并添加进来。">
+    <meta name="description" content="该篇主要整理目前为止javascript的一些更新和迭代，以及相关的新特性和术语。">
     
     
     
@@ -71,15 +71,15 @@ var _hmt = _hmt || [];
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/04/30/front-end-notes-0-about/" title="前端阶段性总结之「总览整理」" itemprop="url">前端阶段性总结之「总览整理」</a>
+      <a href="/2017/05/07/front-end-notes-3-javascript-keep-moving/" title="前端阶段性总结之「javascript新特性」" itemprop="url">前端阶段性总结之「javascript新特性」</a>
   </h1>
   <p class="article-author">By
     
       <a href="https://godbasin.github.io" title="被删">被删</a>
     </p>
   <p class="article-time">
-    <time datetime="2017-04-29T23:11:43.000Z" itemprop="datePublished">2017-04-30</time>
-    更新日期:<time datetime="2017-04-29T23:16:03.246Z" itemprop="dateModified">2017-04-30</time>
+    <time datetime="2017-05-07T06:02:22.000Z" itemprop="datePublished">2017-05-07</time>
+    更新日期:<time datetime="2017-05-07T06:02:31.142Z" itemprop="dateModified">2017-05-07</time>
     
   </p>
 </header>
@@ -88,228 +88,73 @@ var _hmt = _hmt || [];
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前端基础"><span class="toc-number">1.</span> <span class="toc-text">前端基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#入门手册和文档"><span class="toc-number">1.1.</span> <span class="toc-text">入门手册和文档</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#javascript"><span class="toc-number">1.2.</span> <span class="toc-text">javascript</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-CSS"><span class="toc-number">1.3.</span> <span class="toc-text">HTML/CSS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前端框架和工具"><span class="toc-number">2.</span> <span class="toc-text">前端框架和工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#前端框架"><span class="toc-number">2.1.</span> <span class="toc-text">前端框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#前端工具"><span class="toc-number">2.2.</span> <span class="toc-text">前端工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设计和封装"><span class="toc-number">2.3.</span> <span class="toc-text">设计和封装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web相关知识"><span class="toc-number">3.</span> <span class="toc-text">Web相关知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP"><span class="toc-number">3.1.</span> <span class="toc-text">HTTP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Web安全"><span class="toc-number">3.2.</span> <span class="toc-text">Web安全</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#身为程序员"><span class="toc-number">4.</span> <span class="toc-text">身为程序员</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#算法相关"><span class="toc-number">4.1.</span> <span class="toc-text">算法相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编码相关"><span class="toc-number">4.2.</span> <span class="toc-text">编码相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计算机系统"><span class="toc-number">4.3.</span> <span class="toc-text">计算机系统</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">5.</span> <span class="toc-text">结束语</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#进击中的语法糖"><span class="toc-number">1.</span> <span class="toc-text">进击中的语法糖</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ES6-ES7"><span class="toc-number">1.1.</span> <span class="toc-text">ES6/ES7</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Typescript-coffeescript"><span class="toc-number">1.2.</span> <span class="toc-text">Typescript/coffeescript</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#新兴API"><span class="toc-number">1.3.</span> <span class="toc-text">新兴API</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#日新月异的javascript"><span class="toc-number">2.</span> <span class="toc-text">日新月异的javascript</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#不断演化的框架-库"><span class="toc-number">2.1.</span> <span class="toc-text">不断演化的框架/库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#新的术语"><span class="toc-number">2.2.</span> <span class="toc-text">新的术语</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">3.</span> <span class="toc-text">结束语</span></a></li></ol>
 		</div>
 		
-		<p>前段时间恶补了自己还缺乏的一些前端知识体系，并做了些整理，《前端满汉全席系列》主要用于分享。后续若有其他相关的，也会一并添加进来。<br><a id="more"></a></p>
-<h2 id="前端基础"><a href="#前端基础" class="headerlink" title="前端基础"></a>前端基础</h2><hr>
-<p>补上曾经整理过的一篇<a href="https://godbasin.github.io/2016/06/24/front-end-getting-started/">《我的前端入门之路》</a>，对比起来这篇还比较枯燥呢。</p>
-<h3 id="入门手册和文档"><a href="#入门手册和文档" class="headerlink" title="入门手册和文档"></a>入门手册和文档</h3><p>一般来说，入门的话，不管是html/css，还是javascript，都能从<a href="http://www.w3school.com.cn" target="_blank" rel="external">w3c</a>和<a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="external">mdn</a>上找到。<br>相对地说，mdn会更加详细和明确一些，也涉及不少较深入的内容呢。</p>
-<h3 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h3><p>在本骚年看来，javascript是最基本也是最重要的呢。即使现在的框架和工具让你眼花缭乱，不过万变不离其宗，javascript依然是我们最需要深入学习和理解的一门技能吧。</p>
+		<p>该篇主要整理目前为止javascript的一些更新和迭代，以及相关的新特性和术语。<br><a id="more"></a></p>
+<h2 id="进击中的语法糖"><a href="#进击中的语法糖" class="headerlink" title="进击中的语法糖"></a>进击中的语法糖</h2><hr>
+<h3 id="ES6-ES7"><a href="#ES6-ES7" class="headerlink" title="ES6/ES7"></a>ES6/ES7</h3><p>关于ES6和ES7，阮一峰大神的<a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">《ECMAScript 6 入门》</a>其实有个比较完整的说明，具体每个api大家也可以到MDN上进行查询。</p>
+<p>最基础的变化包括：</p>
 <ul>
-<li><p>本骚年看过的一些书：</p>
-<ul>
-<li>《javascript高级程序设计》</li>
-<li>《javascript权威指南》</li>
-<li>《javascript数据结构》</li>
+<li>let/const</li>
+<li>解构（对象、数组等）</li>
+<li>数组、对象、函数的拓展</li>
 <li>…</li>
 </ul>
-</li>
-<li><p>掌握javascript</p>
+<p>这里面有几个新的概念需要了解：</p>
 <ul>
-<li>基本语法和使用</li>
-<li>原型和继承</li>
-<li>闭包</li>
-<li>作用域/原型链</li>
-<li>this和上下文</li>
-<li>DOM对象</li>
-<li>BOM对象</li>
-<li>ajax/XHR</li>
-<li>正则表达式</li>
-</ul>
-</li>
-<li><p>深入了解javascript</p>
-<ul>
-<li>单线程的javascript</li>
-<li>事件循环Eventloop</li>
-<li>javascript的装载和执行</li>
-<li>事件冒泡/捕获、事件委托</li>
-<li>javascript设计模式</li>
-<li>面向对象编程</li>
-</ul>
-</li>
-<li><p>javascript新特性</p>
-<ul>
-<li>ES6/ES7</li>
+<li>Module</li>
 <li>Promise</li>
-<li>fetch</li>
-<li>PWA(Progressive Web Apps)</li>
-<li>WebAssembly</li>
-<li>Rxjs</li>
+<li>Proxy</li>
+<li>Generator/Async</li>
+<li>Class/Decoratir</li>
+<li>…</li>
 </ul>
-</li>
-</ul>
-<h3 id="HTML-CSS"><a href="#HTML-CSS" class="headerlink" title="HTML/CSS"></a>HTML/CSS</h3><p>虽然很多时候对javascript考验更多，但是其实HTML和CSS也并不只是很基础和简单的。</p>
+<p>这些新式语法糖其实已经大大改变了我们以往的写码方式和效率了，配合babel这样的编译工具，我们也无需太担忧新语法的兼容性。</p>
+<h3 id="Typescript-coffeescript"><a href="#Typescript-coffeescript" class="headerlink" title="Typescript/coffeescript"></a>Typescript/coffeescript</h3><p>对于像<a href="http://coffee-script.org/" target="_blank" rel="external">coffeescript</a>和<a href="https://www.typescriptlang.org/" target="_blank" rel="external">typescript</a>等不断出现的语法糖和辅助语法，对javascript的冲击和推进也是贡献了不少的。</p>
+<p>其实两者并不是一样的东西，像coffeescript更多是语法糖，而typescript则是对javascript弱类型的一些辅助吧，大型项目或者多人协作项目会方便很多。</p>
+<p>像如今其实coffeescript已经逐渐退出舞台，因为javascript本身的演进到es6/es7，不断进化的语言是会把各种语言或者语法糖优秀的地方都吸收进来的。<br>不管怎么说，对原生javascript的理解和熟悉也总会对我们使用各种各样的工具、框架和语法糖有一定的帮助。</p>
+<h3 id="新兴API"><a href="#新兴API" class="headerlink" title="新兴API"></a>新兴API</h3><p>其实HTML5出现已经很久了，但或许是因为兼容性问题，又或者是不常用的问题，这些API或许也不是特别了解的：</p>
 <ul>
-<li><p>HTML5新特性</p>
-<ul>
-<li>Web Worker/Service Worker</li>
+<li>audio/video</li>
+<li>Canvas/WebGL</li>
+<li>Websocket/Web Worker</li>
 <li>LocalStorage/SessionStorage</li>
-<li>Canvas</li>
-<li>History</li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/HTML5" target="_blank" rel="external">…</a></li>
-</ul>
-</li>
-<li><p>掌握CSS</p>
-<ul>
-<li>文档流</li>
-<li>盒子模型</li>
-<li>布局（居中）</li>
-<li>BFC/IFC</li>
-<li>CSS3新特性</li>
-<li>CSS动画</li>
-<li>CSS规范（BEM等）</li>
-</ul>
-</li>
-<li><p>浏览器渲染</p>
-<ul>
-<li>浏览器渲染机制</li>
-<li>reflow和repaint</li>
-<li>CSS匹配规则/效率</li>
-</ul>
-</li>
-</ul>
-<h2 id="前端框架和工具"><a href="#前端框架和工具" class="headerlink" title="前端框架和工具"></a>前端框架和工具</h2><hr>
-<h3 id="前端框架"><a href="#前端框架" class="headerlink" title="前端框架"></a>前端框架</h3><p>前端框架可以说是层出不穷的，本骚年也就只涉及几个而已。</p>
-<ul>
-<li><p>涉及框架</p>
-<ul>
-<li>angular1.x</li>
-<li>angular2</li>
-<li>react(+redux)</li>
-<li>vue</li>
 <li>…</li>
 </ul>
-</li>
-<li><p>关于框架</p>
+<h2 id="日新月异的javascript"><a href="#日新月异的javascript" class="headerlink" title="日新月异的javascript"></a>日新月异的javascript</h2><hr>
+<h3 id="不断演化的框架-库"><a href="#不断演化的框架-库" class="headerlink" title="不断演化的框架/库"></a>不断演化的框架/库</h3><p>对于目前来说，比较占分量的框架包括：</p>
 <ul>
-<li>MVC/MVVM</li>
-<li>模板引擎原理</li>
-<li>数据流处理(Flux/Redux/Mobx)</li>
-<li>虚拟DOM</li>
-<li>数据绑定原理</li>
-<li>路由控制</li>
-<li>框架的区别和选型</li>
+<li>Vue</li>
+<li>React</li>
+<li>Angular</li>
 <li>…</li>
 </ul>
-</li>
+<p>然后是一些经常搭配框架进行状态管理的：</p>
+<ul>
+<li>vuex</li>
+<li>flux</li>
+<li>redux</li>
+<li>mobx</li>
+<li>…</li>
 </ul>
-<h3 id="前端工具"><a href="#前端工具" class="headerlink" title="前端工具"></a>前端工具</h3><p>关于前端安装部署、热更新、打包等等，也已经有了一系列的相关工具。</p>
+<p>还有一些新兴库：</p>
 <ul>
-<li><p>安装工具</p>
-<ul>
-<li>node</li>
-<li>npm</li>
+<li>threejs</li>
+<li>d3/echarts</li>
+<li>rxjs</li>
+<li>…</li>
 </ul>
-</li>
-<li><p>构建工具</p>
+<p>各种各样层出不穷的框架和库，我们肯定是学不完的。<br>其实还是关键的，多深入学习javascript，然后了解框架的一些对比和设计，能进行选型以及快速上手，便足够了。</p>
+<h3 id="新的术语"><a href="#新的术语" class="headerlink" title="新的术语"></a>新的术语</h3><p>这里只是简单阐述一些最近接触到的术语，有兴趣大家需要自行搜索，包括：</p>
 <ul>
-<li>Grunt</li>
-<li>Gulp</li>
-<li>Webpack</li>
-<li>Babel</li>
-</ul>
-</li>
-<li><p>校验工具</p>
-<ul>
-<li>Typescript</li>
-</ul>
-</li>
-<li><p>测试工具</p>
-<ul>
-<li>断言库(Mocha/Jasmine)</li>
-<li>Runner(Karma)</li>
-</ul>
-</li>
-</ul>
-<h3 id="设计和封装"><a href="#设计和封装" class="headerlink" title="设计和封装"></a>设计和封装</h3><p>基本的程序员素质–设计抽象，以及前端的组件封装。</p>
-<h2 id="Web相关知识"><a href="#Web相关知识" class="headerlink" title="Web相关知识"></a>Web相关知识</h2><hr>
-<h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><p>身为一个前端，http相关的知识也是需要熟练使用的呢。</p>
-<ul>
-<li><p>HTTP入门</p>
-<ul>
-<li>完整的HTTP请求</li>
-<li>TCP/UDP/IP(TCP的三次握手/四次挥手)</li>
-<li>DNS域名解析(DNS寻址过程)</li>
-<li>CDN</li>
-<li>HTTP协议解析(request/response)</li>
-<li>HTTP常见状态码</li>
-<li>GET/POST/…(Restful)</li>
-</ul>
-</li>
-<li><p>理解HTTP</p>
-<ul>
-<li>HTTP无连接与无状态</li>
-<li>HTTP缓存机制</li>
-<li>会话跟踪(Session/Cookie)</li>
-<li>HTTP与Websocket</li>
-<li>HTTP压缩</li>
+<li>PWA(Google提出的离线APP)</li>
+<li>WebAssembly</li>
 <li>HTTPS/HTTP2</li>
-<li>浏览器同源政策与跨域请求</li>
-</ul>
-</li>
-<li><p>HTTP头属性</p>
-<ul>
-<li>缓存相关(Expires/Cache-Control/Progma/Etag/Modified/…)</li>
-<li>Websocket相关(Upgrade/Connection)</li>
-<li>跨域CORS相关(Origin/Access-Control-*)</li>
-<li>Cookie相关(Set-Cookie/Cookie)</li>
-<li>host/referer</li>
 <li>…</li>
-</ul>
-</li>
-</ul>
-<h3 id="Web安全"><a href="#Web安全" class="headerlink" title="Web安全"></a>Web安全</h3><p>对于Web安全，也有很多是需要知道的。</p>
-<ul>
-<li>XSS攻击</li>
-<li>CSRF攻击</li>
-<li>运营商劫持</li>
-<li>其他攻击(各环节脚本注入/钓鱼网站/…)</li>
-</ul>
-<h2 id="身为程序员"><a href="#身为程序员" class="headerlink" title="身为程序员"></a>身为程序员</h2><hr>
-<h3 id="算法相关"><a href="#算法相关" class="headerlink" title="算法相关"></a>算法相关</h3><p>非科班的自己，也有很多身为程序员的基本素质需要补上。（这块还不是特别熟练，如果有写的不对望指出）</p>
-<ul>
-<li><p>常用算法</p>
-<ul>
-<li>排序算法</li>
-<li>递归</li>
-<li>分治策略</li>
-<li>归并算法</li>
-<li>…</li>
-</ul>
-</li>
-<li><p>数据结构</p>
-<ul>
-<li>链表</li>
-<li>二叉树</li>
-<li>散列表</li>
-<li>…</li>
-</ul>
-</li>
-</ul>
-<h3 id="编码相关"><a href="#编码相关" class="headerlink" title="编码相关"></a>编码相关</h3><ul>
-<li><p>常见编码</p>
-<ul>
-<li>压缩编码</li>
-<li>Base64编码</li>
-<li>哈希算法</li>
-<li>URL编码</li>
-</ul>
-</li>
-<li><p>计算机加密算法</p>
-<ul>
-<li>对称加密算法</li>
-<li>DH密钥交换算法</li>
-<li>非对称加密算法</li>
-</ul>
-</li>
-</ul>
-<h3 id="计算机系统"><a href="#计算机系统" class="headerlink" title="计算机系统"></a>计算机系统</h3><ul>
-<li>计算机系统深入理解</li>
-<li>现代计算机系统</li>
 </ul>
 <h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><hr>
-<p>该文主要用于自我整理一些东西，虽然还不是特别完整，也不是很全面。不过作为自己的阶段性总结，如果能对大家有帮助就更好啦。</p>
+<p>对于框架，大概后面也会整理收藏的一些文章吧。在写这篇文章的时候，其实我也有一段时间没去跟进javascript的最新情况了，或许这些都已经老旧了，但其实都没有关系。<br>重要的还是，自身的提升和不减的热情，共勉呀。</p>
   
 	</div>
 	<div class="author-right">
@@ -334,7 +179,7 @@ var _hmt = _hmt || [];
 
 <div class="article-share" id="share">
 
-  <div data-url="https://godbasin.github.io/2017/04/30/front-end-notes-0-about/" data-title="前端阶段性总结之「总览整理」 | Here. There." data-tsina="null" class="share clearfix">
+  <div data-url="https://godbasin.github.io/2017/05/07/front-end-notes-3-javascript-keep-moving/" data-title="前端阶段性总结之「javascript新特性」 | Here. There." data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -343,19 +188,11 @@ var _hmt = _hmt || [];
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2017/05/01/front-end-notes-1-init-javascript/" title="前端阶段性总结之「掌握javascript」">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  前端阶段性总结之「掌握javascript」</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2017/04/29/three-notes-5-add-mouse-move/"  title="three.js笔记5--添加鼠标移动视角">
+<a href="/2017/05/06/front-end-notes-2-deep-into-javascript/"  title="前端阶段性总结之「深入javascript」">
  <strong>NEXT:</strong><br/> 
- <span>three.js笔记5--添加鼠标移动视角
+ <span>前端阶段性总结之「深入javascript」
 </span>
 </a>
 </div>
@@ -372,7 +209,7 @@ var _hmt = _hmt || [];
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前端基础"><span class="toc-number">1.</span> <span class="toc-text">前端基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#入门手册和文档"><span class="toc-number">1.1.</span> <span class="toc-text">入门手册和文档</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#javascript"><span class="toc-number">1.2.</span> <span class="toc-text">javascript</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML-CSS"><span class="toc-number">1.3.</span> <span class="toc-text">HTML/CSS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前端框架和工具"><span class="toc-number">2.</span> <span class="toc-text">前端框架和工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#前端框架"><span class="toc-number">2.1.</span> <span class="toc-text">前端框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#前端工具"><span class="toc-number">2.2.</span> <span class="toc-text">前端工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设计和封装"><span class="toc-number">2.3.</span> <span class="toc-text">设计和封装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web相关知识"><span class="toc-number">3.</span> <span class="toc-text">Web相关知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP"><span class="toc-number">3.1.</span> <span class="toc-text">HTTP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Web安全"><span class="toc-number">3.2.</span> <span class="toc-text">Web安全</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#身为程序员"><span class="toc-number">4.</span> <span class="toc-text">身为程序员</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#算法相关"><span class="toc-number">4.1.</span> <span class="toc-text">算法相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编码相关"><span class="toc-number">4.2.</span> <span class="toc-text">编码相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计算机系统"><span class="toc-number">4.3.</span> <span class="toc-text">计算机系统</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">5.</span> <span class="toc-text">结束语</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#进击中的语法糖"><span class="toc-number">1.</span> <span class="toc-text">进击中的语法糖</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ES6-ES7"><span class="toc-number">1.1.</span> <span class="toc-text">ES6/ES7</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Typescript-coffeescript"><span class="toc-number">1.2.</span> <span class="toc-text">Typescript/coffeescript</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#新兴API"><span class="toc-number">1.3.</span> <span class="toc-text">新兴API</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#日新月异的javascript"><span class="toc-number">2.</span> <span class="toc-text">日新月异的javascript</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#不断演化的框架-库"><span class="toc-number">2.1.</span> <span class="toc-text">不断演化的框架/库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#新的术语"><span class="toc-number">2.2.</span> <span class="toc-text">新的术语</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">3.</span> <span class="toc-text">结束语</span></a></li></ol>
   </div>
 
 <div id="asidepart">
