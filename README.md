@@ -2,6 +2,15 @@
 被删前端博客   
 ---      
 
+### 前端阶段性总结      
+> [《前端阶段性总结之「网络协议基础」》](https://godbasin.github.io/2017/05/19/front-end-notes-6-network-protocol/)     
+> [《前端阶段性总结之「自动化和构建工具」》](https://godbasin.github.io/2017/05/14/front-end-notes-5-build-tool/)     
+> [《前端阶段性总结之「框架相关」》](https://godbasin.github.io/2017/05/12/front-end-notes-4-frame/)      
+> [《前端阶段性总结之「javascript新特性」》](https://godbasin.github.io/2017/05/07/front-end-notes-3-javascript-keep-moving/)      
+> [《前端阶段性总结之「深入javascript」》](https://godbasin.github.io/2017/05/06/front-end-notes-2-deep-into-javascript/)      
+> [《前端阶段性总结之「掌握javascript」》](https://godbasin.github.io/2017/05/01/front-end-notes-1-init-javascript/)      
+> [《前端阶段性总结之「总览整理」》](https://godbasin.github.io/2017/04/30/front-end-notes-0-about/)      
+
 ### 其他     
 > [《图片居中新用法--巧妙使用background》](https://godbasin.github.io/2017/05/16/img-coutain-with-background/)   
 > [《将json输出为html(二)：js数据类型判断实现》](https://godbasin.github.io/2016/11/13/json-to-html-2-use-object/)  
@@ -17,14 +26,6 @@
 > [《做一个拖放功能的自定义页面》](https://godbasin.github.io/2016/06/19/drag-and-drop/)                                  
 > [《js判断某个位置是否特定元素》](https://godbasin.github.io/2016/06/19/position-object/)                                  
 > [《前端在变，然而热情不变》](https://godbasin.github.io/2016/06/18/first-blog/)   
-
-### 前端阶段性总结      
-> [《前端阶段性总结之「自动化和构建工具」》](https://godbasin.github.io/2017/05/14/front-end-notes-5-build-tool/)     
-> [《前端阶段性总结之「框架相关」》](https://godbasin.github.io/2017/05/12/front-end-notes-4-frame/)      
-> [《前端阶段性总结之「javascript新特性」》](https://godbasin.github.io/2017/05/07/front-end-notes-3-javascript-keep-moving/)      
-> [《前端阶段性总结之「深入javascript」》](https://godbasin.github.io/2017/05/06/front-end-notes-2-deep-into-javascript/)      
-> [《前端阶段性总结之「掌握javascript」》](https://godbasin.github.io/2017/05/01/front-end-notes-1-init-javascript/)      
-> [《前端阶段性总结之「总览整理」》](https://godbasin.github.io/2017/04/30/front-end-notes-0-about/)      
 
 ### three.js笔记    
 > [《three.js笔记5--添加鼠标移动视角》](https://godbasin.github.io/2017/04/29/three-notes-5-add-mouse-move/)   
