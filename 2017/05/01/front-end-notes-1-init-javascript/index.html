@@ -54,11 +54,11 @@ var _hmt = _hmt || [];
 					
 						<li><a href="/">首页</a></li>
 					
-						<li><a href="archives">归档</a></li>
+						<li><a href="/archives">归档</a></li>
 					
-						<li><a href="categories">分类</a></li>
+						<li><a href="/categories">分类</a></li>
 					
-						<li><a href="about">关于我</a></li>
+						<li><a href="/about">关于我</a></li>
 					
 				</ul>
 			</nav>			
@@ -168,8 +168,22 @@ var _hmt = _hmt || [];
 
 <div class="article-share" id="share">
 
-  <div data-url="https://godbasin.github.io/2017/05/01/front-end-notes-1-init-javascript/" data-title="前端阶段性总结之「掌握javascript」 | Here. There." data-tsina="null" class="share clearfix">
-  </div>
+  
+<!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_24x24">
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_renren"></a>
+	<a href="http://www.jiathis.com/share?uid=2134021" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config = {data_track_clickback:'true'};
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js?uid=2134021" charset="utf-8"></script>
+<!-- JiaThis Button END -->   
+
 
 </div>
 </footer>   	       
@@ -199,11 +213,11 @@ var _hmt = _hmt || [];
 	<!-- 如果不是首页且没使用 `comments: false` 关闭评论，则尝试加载评论 -->
 
     <!-- 配置中启用多说时，导入相应代码 -->
-     
-      <section class="comment">
-	    <div class="ds-thread"></div>
-      </section>
-    <!-- 配置中仅启用友言时，导入相应代码 -->
+    
+        <!-- UY BEGIN -->
+        <div id="uyan_frame"></div>
+        <script type="text/javascript" src="//v2.uyan.cc/code/uyan.js?uid=2134021"></script>
+        <!-- UY END -->
     
 
 </div>  
@@ -730,34 +744,6 @@ $(document).ready(function(){
 });
 </script>
 
-
-<script type="text/javascript">
-$(document).ready(function(){ 
-  var $this = $('.share'),
-      url = $this.attr('data-url'),
-      encodedUrl = encodeURIComponent(url),
-      title = $this.attr('data-title'),
-      tsina = $this.attr('data-tsina');
-  var html = [
-  '<a href="#" class="overlay" id="qrcode"></a>',
-  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
-  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
-  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
-  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
-  '<span title="Share to"></span>'
-  ].join('');
-  $this.append(html);
-  $('.article-share-qrcode').click(function(){
-    var imgSrc = $('#qrcode-pic').attr('data-src');
-    $('#qrcode-pic').attr('src', imgSrc);
-    $('#qrcode-pic').load(function(){
-        $('.qrcode strong').text(' ');
-    });
-  });
-});     
-</script>
 
 
 
