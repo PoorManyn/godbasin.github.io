@@ -55,11 +55,11 @@ var _hmt = _hmt || [];
 					
 						<li><a href="/">首页</a></li>
 					
-						<li><a href="/archives">归档</a></li>
+						<li><a href="archives">归档</a></li>
 					
-						<li><a href="/categories">分类</a></li>
+						<li><a href="categories">分类</a></li>
 					
-						<li><a href="/about">关于我</a></li>
+						<li><a href="about">关于我</a></li>
 					
 				</ul>
 			</nav>			
@@ -114,10 +114,15 @@ var _hmt = _hmt || [];
 </footer>   	       
 	</article>
 	
-	
-<section class="comment">
-	<div class="ds-thread"></div>
-</section>
+	<!-- 如果不是首页且没使用 `comments: false` 关闭评论，则尝试加载评论 -->
+
+    <!-- 配置中启用多说时，导入相应代码 -->
+     
+      <section class="comment">
+	    <div class="ds-thread"></div>
+      </section>
+    <!-- 配置中仅启用友言时，导入相应代码 -->
+    
 
 </div>  
         </div>
@@ -209,18 +214,6 @@ $(document).ready(function(){
 });     
 </script>
 
-
-<script type="text/javascript">
-  var duoshuoQuery = {short_name:"null"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-    || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-</script> 
 
 
 

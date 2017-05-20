@@ -54,11 +54,11 @@ var _hmt = _hmt || [];
 					
 						<li><a href="/">首页</a></li>
 					
-						<li><a href="/archives">归档</a></li>
+						<li><a href="archives">归档</a></li>
 					
-						<li><a href="/categories">分类</a></li>
+						<li><a href="categories">分类</a></li>
 					
-						<li><a href="/about">关于我</a></li>
+						<li><a href="about">关于我</a></li>
 					
 				</ul>
 			</nav>			
@@ -181,10 +181,15 @@ var _hmt = _hmt || [];
 
 </nav>
 
-	
-<section class="comment">
-	<div class="ds-thread"></div>
-</section>
+	<!-- 如果不是首页且没使用 `comments: false` 关闭评论，则尝试加载评论 -->
+
+    <!-- 配置中启用多说时，导入相应代码 -->
+     
+      <section class="comment">
+	    <div class="ds-thread"></div>
+      </section>
+    <!-- 配置中仅启用友言时，导入相应代码 -->
+    
 
 </div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
@@ -202,6 +207,12 @@ var _hmt = _hmt || [];
 	<div class="archiveslist">
 		<p class="asidetitle">最近文章</p>
 			<ul class="archive-list">
+			
+					
+				<li class="archive-list-item">
+					<a class="archive-list-link" href="/2017/05/20/front-end-notes-7-init-http/" title="前端阶段性总结之「理解HTTP协议」">前端阶段性总结之「理解HTTP协议」...</a>
+				</li>
+				
 			
 					
 				<li class="archive-list-item">
@@ -257,10 +268,6 @@ var _hmt = _hmt || [];
 				</li>
 				
 			
-					
-				<li class="archive-list-item">
-					<a class="archive-list-link" href="/2017/04/23/three-notes-4-add-keypress-move/" title="three.js笔记4--添加按键移动">three.js笔记4--添加按键移...</a>
-				</li>
 				
 			
 				
@@ -512,7 +519,7 @@ var _hmt = _hmt || [];
   
   <div class="archiveslist">
     <p class="asidetitle"><a href="/archives">归档</a></p>
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">41</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">9</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">41</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">9</span></li></ul>
   </div>
 
 
@@ -562,7 +569,7 @@ var _hmt = _hmt || [];
 			</li>
 		
 			<li class="archive-list-item">
-				<a class="archive-list-link" href="/categories/前端满汉全席/" title="前端满汉全席">前端满汉全席<sup>7</sup></a>
+				<a class="archive-list-link" href="/categories/前端满汉全席/" title="前端满汉全席">前端满汉全席<sup>8</sup></a>
 			</li>
 		
 		</ul>
@@ -575,7 +582,7 @@ var _hmt = _hmt || [];
 		<ul class="archive-list">
 		
 			<li class="archive-list-item">
-				<a class="archive-list-link" href="/tags/分享/" title="分享">分享<sup>11</sup></a>
+				<a class="archive-list-link" href="/tags/分享/" title="分享">分享<sup>12</sup></a>
 			</li>
 		
 			<li class="archive-list-item">
@@ -737,18 +744,6 @@ $(document).ready(function(){
 });     
 </script>
 
-
-<script type="text/javascript">
-  var duoshuoQuery = {short_name:"null"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-    || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-</script> 
 
 
 
