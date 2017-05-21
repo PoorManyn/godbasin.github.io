@@ -2,6 +2,9 @@
 被删前端博客   
 ---      
 
+### Angular2相关   
+> [《从Angular2-beta到Angular4-release框架升级总结》](https://godbasin.github.io/2017/05/21/angular2-beta-to-release/)    
+
 ### Webpack相关
 > [《正确的Webpack配置姿势，快速启动各式框架》](https://godbasin.github.io/2017/05/21/webpack-common-setting/)        
 
@@ -34,9 +37,6 @@
 > [《jQuery响应式瀑布流》](https://godbasin.github.io/2016/06/20/responsive-waterfall/)                                         
 > [《做一个拖放功能的自定义页面》](https://godbasin.github.io/2016/06/19/drag-and-drop/)           
 
-### 其他   
-
-
 ### three.js笔记    
 > [《three.js笔记5--添加鼠标移动视角》](https://godbasin.github.io/2017/04/29/three-notes-5-add-mouse-move/)   
 > [《three.js笔记4--添加按键移动》](https://godbasin.github.io/2017/04/23/three-notes-4-add-keypress-move/)   
@@ -44,8 +44,6 @@
 > [《three.js笔记2--添加物体》](https://godbasin.github.io/2017/04/16/three-notes-2-add-objects/)     
 > [《three.js笔记1--初始化3D世界》](https://godbasin.github.io/2017/04/13/three-notes-1-init-3d-world/)     
 
-## 框架相关  
----
 ### Angular1-free    
 > [《玩转Angular1(18)--使用mock本地数据模拟》](https://godbasin.github.io/2017/04/03/angular-free-18-use-angular-mock/)     
 > [《玩转Angular1(17)--脚本自动更新并注册指令》](https://godbasin.github.io/2017/03/31/angular-free-17-auto-generate-and-inject-directive/)     
