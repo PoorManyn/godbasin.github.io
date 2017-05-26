@@ -2,6 +2,13 @@
 被删前端博客   
 ---      
 
+### 最新  
+> [《ES6/ES7好玩实用的特性介绍》](https://godbasin.github.io/2017/05/26/es6-es7-interesting-feature/)    
+> [《从Angular2-beta到Angular4-release框架升级总结》](https://godbasin.github.io/2017/05/21/angular2-beta-to-release/)    
+> [《正确的Webpack配置姿势，快速启动各式框架》](https://godbasin.github.io/2017/05/21/webpack-common-setting/)        
+> [《前端阶段性总结之「理解HTTP协议」》](https://godbasin.github.io/2017/05/20/front-end-notes-7-init-http/)     
+> [《前端阶段性总结之「网络协议基础」》](https://godbasin.github.io/2017/05/19/front-end-notes-6-network-protocol/)     
+
 ### Angular2相关   
 > [《从Angular2-beta到Angular4-release框架升级总结》](https://godbasin.github.io/2017/05/21/angular2-beta-to-release/)    
 
@@ -26,6 +33,7 @@
 
 
 ### js相关    
+> [《ES6/ES7好玩实用的特性介绍》](https://godbasin.github.io/2017/05/26/es6-es7-interesting-feature/)    
 > [《将json输出为html(二)：js数据类型判断实现》](https://godbasin.github.io/2016/11/13/json-to-html-2-use-object/)  
 > [《将json输出为html(一)：字符串正则匹配》](https://godbasin.github.io/2016/11/13/json-to-html-1-use-string-regular/)                                                
 > [《谈谈js的闭包》](https://godbasin.github.io/2016/07/03/js-closure/)                         
