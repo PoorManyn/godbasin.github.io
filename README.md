@@ -3,6 +3,7 @@
 ---      
 
 ### 最新  
+> [《谈谈Angular2的依赖注入》](https://godbasin.github.io/2017/05/28/di-in-angular/)    
 > [《ES6/ES7好玩实用的特性介绍》](https://godbasin.github.io/2017/05/26/es6-es7-interesting-feature/)    
 > [《从Angular2-beta到Angular4-release框架升级总结》](https://godbasin.github.io/2017/05/21/angular2-beta-to-release/)    
 > [《正确的Webpack配置姿势，快速启动各式框架》](https://godbasin.github.io/2017/05/21/webpack-common-setting/)        
@@ -10,6 +11,7 @@
 > [《前端阶段性总结之「网络协议基础」》](https://godbasin.github.io/2017/05/19/front-end-notes-6-network-protocol/)     
 
 ### Angular2相关   
+> [《谈谈Angular2的依赖注入》](https://godbasin.github.io/2017/05/28/di-in-angular/)    
 > [《从Angular2-beta到Angular4-release框架升级总结》](https://godbasin.github.io/2017/05/21/angular2-beta-to-release/)    
 
 ### Webpack相关
