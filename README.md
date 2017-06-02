@@ -3,18 +3,20 @@
 ---      
 
 ### 最新  
-> [《玩转Angular3--启用路由和添加静态资源》](https://godbasin.github.io/2017/05/30/angular2-free-3-init-routes-and-assets/)    
-> [《玩转Angular2--改善应用配置》](https://godbasin.github.io/2017/05/29/angular2-free-2-inprove-app-configuration/)    
-> [《玩转Angular1--用Webpack启动Angular2应用》](https://godbasin.github.io/2017/05/28/angular2-free-1-init-angular-app-with-webpack/)    
+> [《玩转Angular2(4)--制作左侧自动定位菜单》](https://godbasin.github.io/2017/06/02/angular2-free-4-create-sidebar/)    
+> [《玩转Angular2(3)--启用路由和添加静态资源》](https://godbasin.github.io/2017/05/30/angular2-free-3-init-routes-and-assets/)    
+> [《玩转Angular2(2)--改善应用配置》](https://godbasin.github.io/2017/05/29/angular2-free-2-inprove-app-configuration/)    
+> [《玩转Angular2(1)--用Webpack启动Angular2应用》](https://godbasin.github.io/2017/05/28/angular2-free-1-init-angular-app-with-webpack/)    
 > [《谈谈Angular2的依赖注入》](https://godbasin.github.io/2017/05/28/di-in-angular/)    
 > [《ES6/ES7好玩实用的特性介绍》](https://godbasin.github.io/2017/05/26/es6-es7-interesting-feature/)    
 > [《从Angular2-beta到Angular4-release框架升级总结》](https://godbasin.github.io/2017/05/21/angular2-beta-to-release/)    
 > [《正确的Webpack配置姿势，快速启动各式框架》](https://godbasin.github.io/2017/05/21/webpack-common-setting/)          
 
 ### Angular2-free   
-> [《玩转Angular3--启用路由和添加静态资源》](https://godbasin.github.io/2017/05/30/angular2-free-3-init-routes-and-assets/)    
-> [《玩转Angular2--改善应用配置》](https://godbasin.github.io/2017/05/29/angular2-free-2-inprove-app-configuration/)    
-> [《玩转Angular1--用Webpack启动Angular2应用》](https://godbasin.github.io/2017/05/28/angular2-free-1-init-angular-app-with-webpack/)    
+> [《玩转Angular2(4)--制作左侧自动定位菜单》](https://godbasin.github.io/2017/06/02/angular2-free-4-create-sidebar/)    
+> [《玩转Angular2(3)--启用路由和添加静态资源》](https://godbasin.github.io/2017/05/30/angular2-free-3-init-routes-and-assets/)    
+> [《玩转Angular2(2)--改善应用配置》](https://godbasin.github.io/2017/05/29/angular2-free-2-inprove-app-configuration/)    
+> [《玩转Angular2(1)--用Webpack启动Angular2应用》](https://godbasin.github.io/2017/05/28/angular2-free-1-init-angular-app-with-webpack/)    
 
 ### Angular2相关   
 > [《谈谈Angular2的依赖注入》](https://godbasin.github.io/2017/05/28/di-in-angular/)    
