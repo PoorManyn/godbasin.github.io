@@ -3,6 +3,7 @@
 ---      
 
 ### 最新  
+> [《玩转Angular2(6)--模型驱动和模板驱动的表单》](https://godbasin.github.io/2017/06/04/angular2-free-6-two-form-building/)    
 > [《玩转Angular2(5)--自定义input表单控件》](https://godbasin.github.io/2017/06/03/angular2-free-5-custom-input-component/)    
 > [《玩转Angular2(4)--制作左侧自动定位菜单》](https://godbasin.github.io/2017/06/02/angular2-free-4-create-sidebar/)    
 > [《玩转Angular2(3)--启用路由和添加静态资源》](https://godbasin.github.io/2017/05/30/angular2-free-3-init-routes-and-assets/)    
@@ -13,6 +14,7 @@
 > [《从Angular2-beta到Angular4-release框架升级总结》](https://godbasin.github.io/2017/05/21/angular2-beta-to-release/)    
 
 ### Angular2-free   
+> [《玩转Angular2(6)--模型驱动和模板驱动的表单》](https://godbasin.github.io/2017/06/04/angular2-free-6-two-form-building/)    
 > [《玩转Angular2(5)--自定义input表单控件》](https://godbasin.github.io/2017/06/03/angular2-free-5-custom-input-component/)    
 > [《玩转Angular2(4)--制作左侧自动定位菜单》](https://godbasin.github.io/2017/06/02/angular2-free-4-create-sidebar/)    
 > [《玩转Angular2(3)--启用路由和添加静态资源》](https://godbasin.github.io/2017/05/30/angular2-free-3-init-routes-and-assets/)    
