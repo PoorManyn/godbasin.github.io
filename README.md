@@ -3,6 +3,7 @@
 ---      
 
 ### 最新  
+> [《玩转Angular2(8)--表单的radio和checkbox》](https://godbasin.github.io/2017/06/10/angular2-free-8-radio-and-checkbox/)    
 > [《玩转Angular2(7)--创建动态表单》](https://godbasin.github.io/2017/06/09/angular2-free-7-dynamic-form/)    
 > [《玩转Angular2(6)--模型驱动和模板驱动的表单》](https://godbasin.github.io/2017/06/04/angular2-free-6-two-form-building/)    
 > [《玩转Angular2(5)--自定义input表单控件》](https://godbasin.github.io/2017/06/03/angular2-free-5-custom-input-component/)    
@@ -10,9 +11,10 @@
 > [《玩转Angular2(3)--启用路由和添加静态资源》](https://godbasin.github.io/2017/05/30/angular2-free-3-init-routes-and-assets/)    
 > [《玩转Angular2(2)--改善应用配置》](https://godbasin.github.io/2017/05/29/angular2-free-2-inprove-app-configuration/)    
 > [《玩转Angular2(1)--用Webpack启动Angular2应用》](https://godbasin.github.io/2017/05/28/angular2-free-1-init-angular-app-with-webpack/)    
-> [《谈谈Angular2的依赖注入》](https://godbasin.github.io/2017/05/28/di-in-angular/)    
 
 ### Angular2-free   
+> [《玩转Angular2(8)--表单的radio和checkbox》](https://godbasin.github.io/2017/06/10/angular2-free-8-radio-and-checkbox/)    
+> [《玩转Angular2(7)--创建动态表单》](https://godbasin.github.io/2017/06/09/angular2-free-7-dynamic-form/)    
 > [《玩转Angular2(6)--模型驱动和模板驱动的表单》](https://godbasin.github.io/2017/06/04/angular2-free-6-two-form-building/)    
 > [《玩转Angular2(5)--自定义input表单控件》](https://godbasin.github.io/2017/06/03/angular2-free-5-custom-input-component/)    
 > [《玩转Angular2(4)--制作左侧自动定位菜单》](https://godbasin.github.io/2017/06/02/angular2-free-4-create-sidebar/)    
